@@ -1,0 +1,369 @@
+#======================================================!
+#========= High temperature chemistry =================!
+#======================================================!
+################################################################
+################# Methylcyclohexane chemistry ##################
+################# High temperature sub-mechanism ###############
+################################################################
+
+# THESE REACTIONS FORM THE HIGH T SUB-MECHANISM FOR MCH
+MC025: 2 A-C3H5 -> X15-C6H10    { a = 6.630e+14 n = -0.570 E =  0.000 }
+
+MC074f: T-C3H5 + C2H4 -> AC5H9D-C5H9      { A = 1.88E+06 n =  1.84 E =  12.80 }
+
+MC057: CH3 + N-C4H5 -> H + CDCCDCCJ-C5H7	 { a = 8.212e+16 n = -0.167 E = 58.99 }#rev from thermodata
+
+MC032: I-C4H5 + CH3 -> I-C5H8   { a = 6.630e+14 n = -0.570 E =  0.000 }
+
+MC036: CH3 + C4H6 -> CC5H9A-C5H9	  {a = 1.739e+07 n = 1.247 E = 42.84} #rev from thermodata
+
+MC063: C5H6 + H -> CDCCJCDC-C5H7        { a = 1.400e+14 n = -0.180 E = 13.180 }
+
+# --- C4H8-2-C4H8 reactions --- #
+
+MC013: C4H8-2-C4H8 + OH -> C2H5 + CH3CHO { a = 2.600e+13 n = 0.000 E =  0.000 }
+
+
+# --- CDCCDCCJ-C5H7 reactions --- #
+
+MC060: CDCCDCCJ-C5H7 + O2 -> C2H3CHCHO + CH2O    { a = 8.160e+10 n = 0.180 E = 38.242 }
+MC062: CDCCDCCJ-C5H7 -> CDCCJCDC-C5H7   { a = 2.609e+12 n = -1.058 E = 1.374 }#rev from thermodata
+MC056: CDCCDCCJ-C5H7 + H -> N-C4H5 + CH3        { a = 2.910e+26 n = -2.180 E = 153.846 }
+MC058: CDCCDCCJ-C5H7 + H -> C5H81-3-C5H8        { a = 2.330e+20 n = -1.600 E = 12.636 }
+
+
+# --- CDCCJCDC-C5H7 reactions --- #
+
+MC064: CDCCJCDC-C5H7 -> H + C5H6        {a = 9.267e+13  n = -0.434 E = 158.61}#rev from thermodata
+MC061: CDCCJCDC-C5H7 -> CDCCDCCJ-C5H7   { a = 5.350e+11 n = -0.700 E =  0.251 }
+
+
+# --- I-C5H7 reactions --- #
+
+MC067: I-C5H7 -> A-C3H4 + C2H3   { a = 3.263e+15 n = -0.265 E = 293.480 }
+MC065: I-C5H7 + H -> I-C5H8      { a = 1.990e+14 n = 0.000 E =  0.000 }
+
+
+# --- I-C5H8 reactions --- #
+
+MC033: I-C5H8 -> CH3 + I-C4H5   { a = 1.555e+24 n = -2.216 E =  394.765}#rev from thermodata
+MC069: I-C5H8 + H -> AC5H9D-C5H9        { a = 1.320e+13 n = 0.000 E = 13.640 }
+MC073: I-C5H8 + OH -> I-C5H7 + H2O        { A = 2.00E+08 n =  1.46 E =   2.25 }
+MC072: I-C5H8 + H -> I-C5H7 + H2  { A = 6.60E+05 n =  2.54 E =  28.27 }#SAME AS BASE C3H5+H->A-C3H5+H2
+MC068: I-C5H8 + O -> I-C5H7 + OH  { A = 9.65E+04 n =  2.68 E =  15.55 }
+MC071: I-C5H8 + H -> CC5H9A-C5H9 { a = 1.320e+13 n = 0.000 E = 19.497 }
+
+
+# --- C5H81-3-C5H8 reactions --- #
+
+MC014: O + C5H81-3-C5H8 -> OH + CDCCDCCJ-C5H7    { a = 5.240e+11 n = 0.700 E = 24.619 }
+MC015: OH + C5H81-3-C5H8 -> H2O + CDCCDCCJ-C5H7  { a = 3.120e+06 n = 2.000 E = -1.247 }
+MC059: C5H81-3-C5H8 -> H + CDCCDCCJ-C5H7	 { a = 2.336e+22 n = -1.689 E = 365.93 }
+MC016: C5H81-3-C5H8 + H -> H2 + CDCCDCCJ-C5H7    { a = 2.232e+06 n = 2.278 E = -8.610 }
+
+
+# --- AC5H9D-C5H9 reactions --- #
+
+MC070: AC5H9D-C5H9 -> H + I-C5H8 	 { a = 2.817e+11 n = 0.2789 E = 137.174}#rev from thermodata
+
+
+# --- CC5H9A-C5H9 reactions --- #
+
+MC035: CC5H9A-C5H9 -> C4H6 + CH3         {a = 4.265E+11  n = 0.42 E = 128.1}#FROM TSANG 2006, TABLE 3: HIGH PR. RATE
+MC076: CC5H9A-C5H9 -> C3H6 + C2H3 	    { a = 8.249e+11 n = 0.731 E = 177.018}#rev from thermodata
+
+
+# --- C5H9 reactions --- #
+
+MC017: C5H9 -> C2H3 + C3H6       {a = 2.03E13 n = 0.17 E = 241.55}
+
+
+# --- IC5H6OJ-C5H7O reactions --- #
+
+MC083: IC5H6OJ-C5H7O -> N-C4H5 + CH2O    { a = 1.455e+22 n = -2.106 E = 128.949 }
+MC066: I-C5H7 + HO2 -> IC5H6OJ-C5H7O + OH        { a = 7.000e+12 n = 0.000 E = -4.184 }
+
+
+# --- A1-C6H6 reactions --- #
+
+MC088f:  H + A1-C6H6 -> CY-C6H7 { a = 4.03e+13 n = 0.000 E =  18.04 }#NIST 1992 BAULCH
+
+
+# --- X13CYCHEX-H8C6 reactions --- #
+
+MC089: X13CYCHEX-H8C6 -> A1-C6H6 + H2   { a = 4.0E+12 n = 0 E = 240.16 }
+MC092: X13CYCHEX-H8C6 + OH -> CY-C6H7 + H2O { a = 2.250e+13 n = 0.000 E =  5.092 }#SAME AS MCHDE + OH
+MC091: X13CYCHEX-H8C6 + H -> CY-C6H7 + H2 {A = 1.00E+14 n =   .00 E =  16.32}#SAME AS MCHDE + H
+MC090: X13CYCHEX-H8C6 -> CY-C6H7 + H    { a = 5.010e+15 n = 0.000 E = 303.758 }
+
+# --- CYCHEXENE-C6H10 reactions --- #
+
+#FROM SILKE ET AL
+MC093: CYCHEXENE-C6H10 -> C4H6 + C2H4   		 { a = 4.00e+12 n = 0 E = 240.16}
+
+UL094: CYCHEXENE-C6H10 + OH -> CYCC6H92-C6H9 + H2O       { a = 9.340e+07 n = 1.610 E = -0.146 }
+UL095: CYCHEXENE-C6H10 + O -> CYCC6H92-C6H9 + OH { a = 1.102e+06 n = 2.450 E = 11.841 }
+UL096: CYCHEXENE-C6H10 + OH -> CYCC6H91-C6H9 + H2O       { a = 5.528e+04 n = 2.640 E = -8.029 }
+UL097: CYCHEXENE-C6H10 + O -> CYCC6H91-C6H9 + OH { a = 1.320e+06 n = 2.430 E =  5.063 }
+UL098: HO2 + CYCHEXENE-C6H10 -> H2O2 + CYCC6H91-C6H9     { a = 8.000e+12 n = 0.000 E = 66.944 }
+UL099: CYCHEXENE-C6H10 + H -> CYCC6H91-C6H9 + H2 { a = 6.752e+05 n = 2.360 E =  0.866 }
+UL100: CYCHEXENE-C6H10 + H -> CYCC6H92-C6H9 + H2 { a = 2.600e+06 n = 2.400 E = 18.707 }
+UL101: HO2 + CYCHEXENE-C6H10 -> H2O2 + CYCC6H92-C6H9     { a = 8.000e+12 n = 0.000 E = 66.944 }
+
+UL102f: X13CYCHEX-H8C6 + H -> CYCC6H92-C6H9      { a = 1.320e+13 n = 0.000 E = 13.640 }
+UL103f: X13CYCHEX-H8C6 + H -> CYCC6H91-C6H9      { a = 1.320e+13 n = 0.000 E = 13.640 }
+UL104f: X14CYCHEX-C6H8 + H -> CYCC6H92-C6H9      { a = 1.320e+13 n = 0.000 E = 13.640 }
+
+#RING OPEN/CLOSE - CHANGE I
+UL105: X15C6H93-C6H9 -> CYCC6H92-C6H9  { a = 8.370e+02 n = 2.349 E = 22.874 }
+UL106: CYCC6H92-C6H9 -> X15C6H93-C6H9  { a = 5.582e+06 n = 2.104 E = 72.033 }
+
+# --- X13C6H96-C6H9 reactions --- #
+
+#RING CLOSING FROM SIRJEAN
+UL107f: X13C6H96-C6H9 -> CYCC6H91-C6H9  { a = 5.31e+04 n = 1.921 E = 27.88 }
+
+UL108: X13C6H96-C6H9 -> N-C4H5 + C2H4      { a = 2.519e+11 n = 0.774 E = 171.783 }
+
+# --- X15C6H93-C6H9 reactions --- #
+
+#FROM CAVALOTTI
+UL109: X15C6H93-C6H9 -> C2H3 + C4H6     { a = 1.0e+20 n = -1.0 E = 195.20 }
+
+UL110: X15-C6H10 + O -> X15C6H93-C6H9 + OH       { a = 1.320e+06 n = 2.430 E =  5.063 }
+UL111: X15-C6H10 + OH -> X15C6H93-C6H9 + H2O     { a = 5.528e+04 n = 2.640 E = -8.029 }
+MC026: X15-C6H10 -> 2 A-C3H5 	 { a = 4.123e+20 n = -1.558 E =  249.88}
+
+# --- X135-C6H8 reactions --- #
+
+UL112f: X135-C6H8 + H -> X13C6H96-C6H9   { a = 1.320e+13 n = 0.000 E = 13.640 }
+
+LP113: X135-C6H8 + H -> X15C6H93-C6H9   { a = 2.640e+13 n = 0.000 E = 13.640 }
+LP114:  X15C6H93-C6H9 -> H + X135-C6H8  { a = 1.012e+14 n = -0.198 E = 177.770 }
+
+# --- X13-C6H10 reactions --- #
+
+MC115: X13-C6H10 + H -> C6H11 { a = 1.320e+13 n = 0.000 E = 13.640 }
+
+
+# --- C6H11 reactions --- #
+
+MC123: C6H11 -> C6H11X-C6H11          { a = 297.3 n = 3.01 E = 137.668}
+MC120: C6H11 -> H + X15-C6H10  { a = 9.866e+15 n = -0.359 E = 230.946 }
+MC116: C6H11 -> H + X13-C6H10 { a = 2.84e+14 n = -0.0873 E = 190.569}
+
+
+# --- C6H11X-C6H11 reactions --- #
+
+MC122: C6H11X-C6H11 -> C6H11          { a = 1.55E2 n = 2.83 E = 65.06}
+MC121: C6H11X-C6H11 -> C4H7 + C2H4     { a = 2E12 n = 0 E = 125.10}
+MC118: C6H11X-C6H11 -> CYCHEXRAD-C6H11       { a = 5.31e+04 n = 1.921 E = 27.88 }
+
+
+# --- CYCHEXRAD-C6H11 reactions --- #
+
+MC117: CYCHEXRAD-C6H11 -> C6H11X-C6H11      { a = 2.75e+12 n = 0.624 E = 128.78}
+MC119f:  CYCHEXRAD-C6H11 -> CYCHEXENE-C6H10 + H { a = 8.91E+11 n = 0.834 E = 151.90 }
+
+
+# --- A1CH3-C7H8 reactions --- #
+
+MC132f: H + A1CH3-C7H8 -> MCHJDE-C7H9   { a = 4.03e+13 n = 0.000 E =  18.04 }#NIST 1992 BAULCH
+
+
+# --- MCHDE-C7H10 reactions --- #
+
+MC133: MCHDE-C7H10 + OH -> MCHJDE-C7H9 + H2O    { a = 2.250e+13 n = 0.000 E =  5.092 }
+MC134: MCHDE-C7H10 + H -> MCHJDE-C7H9 + H2     { A = 1.00E+14 n =   .00 E =  16.32}
+
+
+# --- MCHJE-C7H11 reactions --- #
+
+MC135: MCHJE-C7H11 + O2 -> MCHDE-C7H10 + HO2    { a = 6.000e+13 n = 0.000 E = 64.726 }
+MC136: HO2 + MCHJE-C7H11 -> O2 + MCHE-C7H12     { a = 1.692e+13 n = 0.028 E =  3.764 }
+
+#LIKE CYCC6H91- -> X13CYCHEX + H
+UL137: MCHJE-C7H11 -> MCHDE-C7H10 + H           { a = 2.05e+18 n = -1.28 E = 216.8}#FROM 3524b
+UL138: MCHDE-C7H10 + H -> MCHJE-C7H11           { a = 1.32e+13 n = 0.0   E = 13.64}
+
+# --- C7H11 reactions --- #
+
+#SAME AS CYCC6H91- <-> X13C6H96
+#IT SHOULD BE X13C7H116 INSTEAD OF CDCCCDCCXC
+UL139: X13C7H116-C7H11 -> MCHJE-C7H11     { a = 5.31e+04 n = 1.921 E = 27.88}
+UL140: MCHJE-C7H11 -> X13C7H116-C7H11     { a = 2.94e+12 n = 0.77  E = 172.87} 
+UL141: X13C7H116-C7H11 -> N-C4H5 + C3H6      { a = 2.519e+11 n = 0.774 E = 171.783 }
+
+#FROM REV OF X13C6H96 -> X135-C6H8 + H
+#IT SHOULD BE X13C7H116- INSTEAD OF CDCCCDCCXC
+UL142: X13C7H116-C7H11 -> X135C7H10-C7H10 + H          { A = 2.664e+11 n = 0.30 E = 135.5}
+#SAME AS X135-C6H8 + H <-> X15C6H93-
+UL143f: X135C7H10-C7H10 + H -> X15C7H114-C7H11          { A = 1.320e+13 n = 0.00 E = 13.64}
+#SAME AS X15C6H93- -> C2H3 + C4H6
+UL144: X15C7H114-C7H11 -> C2H3 + C5H81-3-C5H8           { a = 1.0e+20 n = -1.0 E = 195.20} 
+
+# --- X15-C7H12 reactions --- #
+UL145f: A-C3H5 + I-C4H7 -> X15C7H12-C7H12        { a = 6.630e+14 n = -0.570 E =  0.000 }
+UL146: C7H13 -> H + X15C7H12-C7H12    { a = 1.547e+14 n = -0.220 E = 152.551 }
+UL147: C7H13 -> H + X15C7H12-C7H12    { a = 1.547e+14 n = -0.220 E = 152.551 }
+#END
+
+# --- MCHE-C7H12 reactions --- #
+
+MC157: MCHE-C7H12 + H -> MCHJE-C7H11 + H2     { A = 1.00E+14 n =   .00 E =  16.32}
+MC158: MCHE-C7H12 + OH -> MCHJE-C7H11 + H2O     { a = 4.500e+13 n = 0.000 E =  9.276 }
+MC155: MCHE-C7H12 + HO2 -> MCH2QJ1-C7H13O2     { a = 8.000e+10 n = 0.000 E = 29.288 }
+
+#DECOMP. OF MCHE FROM TSANG 1978, INT J CHEM KIN, 10 (11) - CHANGE H
+MC166: MCHE-C7H12 -> I-C5H8 + C2H4 { a = 4.0E+12 n = 0.0 E = 240.16}
+
+MC154: MCHE-C7H12 + HO2 -> MCHJE-C7H11 + H2O2   { a = 2.800e+12 n = 0.000 E = 62.342 }
+
+# --- CHXDCH2-C7H12 reactions --- #
+
+MC153: CHXDCH2-C7H12 + H -> CYCHEXCH2-C7H13     { a = 6.250e+11 n = 0.510 E = 10.962 }
+
+
+# --- C7H12 reactions --- #
+
+MC167: C7H12 + H -> C7H13  { a = 1.320e+13 n = -0.000 E = 13.640 }
+
+
+# --- CYCHEXCH2-C7H13 reactions --- #
+
+MC148: CYCHEXCH2-C7H13 + O2 -> CHXDCH2-C7H12 + HO2      { a = 1.200e+12 n = 0.000 E = 26.778 }
+
+# --- C7H13 reactions --- #
+
+MC018: C7H13 -> C2H4 + C5H9     { a = 2.0e+12 n = 0.000 E = 125.4 }
+
+MC168:  C7H13 -> H + C7H12 { a = 3.284e+10 n = 0.608 E = 124.150 }
+
+#NEW RATES - SIRJEAN
+MC174: C7H13 -> MCHR3-C7H13     { a = 5.31e+04 n = 1.921 E = 27.8}#ring closure
+MC175: MCHR3-C7H13 -> C7H13      { a = 2.621e+12 n = 0.63 E = 128.786}
+MC178: C7H13 -> CYCHEXCH2-C7H13 { a = 5.31e+04 n = 1.921 E = 27.8}
+MC179: CYCHEXCH2-C7H13 -> C7H13 { A = 2.621e+12 n = 0.63 E = 128.786}
+MC176: C7H13 -> MCHR2-C7H13     { a = 5.31e+04 n = 1.921 E = 27.8  }#ring closure
+MC177: MCHR2-C7H13 -> C7H13    { A = 2.621e+12 n = 0.63 E = 128.786} #ring-opening
+
+# --- MCHR3-C7H13 reactions --- #
+
+MC162f: MCHR3-C7H13 -> MCHE-C7H12 + H { a = 5.94E+11 n = 0.834 E = 151.90 }#x2/3
+MC203: MCHR3-C7H13 + O2 -> MCHE-C7H12 + HO2     { a = 1.200e+12 n = 0.000 E = 33.890 }
+MC192: MCHR3-C7H13 -> KC7H13G-C7H13    { A = 2.75e+12 n = 0.624 E = 128.786}
+
+# --- MCHR2-C7H13 reactions --- #
+
+MC200: MCHR2-C7H13 + O2 -> MCHE-C7H12 + HO2     { a = 9.000e+11 n = 0.000 E = 31.506 }
+MC163f: MCHR2-C7H13 -> MCHE-C7H12 + H { a = 5.94E+11 n = 0.834 E = 151.90 }
+MC188: MCHR2-C7H13 -> GC7H13L-C7H13     { A = 2.75e+12 n = 0.624 E = 128.786}
+MC198: MCHR2-C7H13 -> CH3 + CYCHEXENE-C6H10     { a = 1.518e+13 n = 0.396 E = 137.320 }
+
+
+# --- MCHR4-C7H13 reactions --- #
+
+MC161f: MCHR4-C7H13 -> MCHE-C7H12 + H { a = 2.97E+11 n = 0.834 E = 151.90 }#x1/3 since only one isomer of MCHE is formed
+MC210:  MCHR4-C7H13 + O2 -> MCHE-C7H12 + HO2    { a = 1.200E+12 n = 0.000 E =  33.890 }
+MC185: MCHR4-C7H13 -> EC7H13A-C7H13	{ a = 2.75e+12 n = 0.624 E = 128.786}
+
+
+# --- EC7H13A-C7H13 reactions --- #
+
+MC184: EC7H13A-C7H13 -> MCHR4-C7H13     { a = 5.31e+04 n = 1.921 E = 27.8}
+MC183: EC7H13A-C7H13 -> C3H6 + C4H7     { a = 1.512e+12 n = 0.523 E = 52.500 }
+
+
+# --- KC7H13G-C7H13 reactions --- #
+
+MC193: KC7H13G-C7H13 -> C2H4 + C5H9     { a = 8.908e+10 n = 0.560 E = 66.355 }
+MC191: KC7H13G-C7H13 -> MCHR3-C7H13    { a = 5.31e+04 n = 1.921 E = 27.8}
+
+
+# --- GC7H13L-C7H13 reactions --- #
+
+MC189: GC7H13L-C7H13 -> GC7H13I-C7H13   { a = 3.670e+12 n = -0.600 E = 54.392 }
+MC187: GC7H13L-C7H13 -> MCHR2-C7H13     { a = 5.31e+04 n = 1.921 E = 27.8}
+MC190: GC7H13L-C7H13 -> C2H4 + CC5H9A-C5H9      { a = 6.733e+12 n = 0.396 E = 123.116 }
+
+
+# --- MCHR1-C7H13 reactions --- #
+
+MC173: MCHR1-C7H13 -> AC7H13F-C7H13       { A = 2.75e+12 n = 0.624 E = 128.786}
+MC164f: MCHR1-C7H13 -> MCHE-C7H12 + H { a = 2.97E+11 n = 0.834 E = 151.90 }
+MC197: MCHR1-C7H13 + O2 -> MCHE-C7H12 + HO2     { a = 1.200e+12 n = 0.000 E = 33.890 }
+MC165f: MCHR1-C7H13 -> CHXDCH2-C7H12 + H { a = 4.45E+11 n = 0.834 E = 151.90 }#MUST BE /2 SINCE ONLY ONE SPOT FOR H-REMOVAL
+MC196: MCHR1-C7H13 + HO2 -> MCH1OJ-C7H13O + OH  { a = 7.000e+12 n = 0.000 E = -4.184 }
+
+
+# --- AC7H13F-C7H13 reactions --- #
+
+MC170: AC7H13F-C7H13 -> C2H4 + AC5H9D-C5H9      { a = 1.256e+13 n = 0.406 E = 123.085 }
+MC172: AC7H13F-C7H13 -> MCHR1-C7H13     { a = 5.31e+04 n = 1.921 E = 27.8 }#RING-CLOSING
+
+
+# --- GC7H13I-C7H13 reactions --- #
+
+MC186: GC7H13I-C7H13 -> C2H5 + I-C5H8   { a = 1.326e+14 n = 0.461 E = 163.675 }
+
+# --- MCH-C7H14 reactions --- #
+
+MC243: MCH-C7H14 + OH -> MCHR2-C7H13 + H2O       { a = 1.941e5 n = 2.451 E = -4.872 } #MCH(rad2)        ortho
+MC242: MCH-C7H14 + OH -> MCHR3-C7H13 + H2O       { a = 1.941e5 n = 2.451 E = -4.872 } #MCH(rad3)        meta
+MC245: MCH-C7H14 + OH -> CYCHEXCH2-C7H13 + H2O   { a = 2.0038e7 n = 1.763 E = 0.133 } #MCH(rad1)        primary-side chain
+MC241: MCH-C7H14 + OH -> MCHR4-C7H13 + H2O       { a = 9.709e4 n = 2.451 E = -4.872 } #MCH(rad4)        para
+MC244: MCH-C7H14 + OH -> MCHR1-C7H13 + H2O       { a = 5.122e5 n = 2.060 E = -7.673 } #MCH(rad5)        tertiary
+
+MC218: MCH-C7H14 + CH3O -> MCHR3-C7H13 + CH3OH  { a = 2.900e+11 n = 0.000 E = 19.125 }
+MC215: MCH-C7H14 + CH3O -> MCHR1-C7H13 + CH3OH  { a = 2.290e+10 n = 0.000 E = 12.021 }
+MC230: MCH-C7H14 + CH3O -> MCHR4-C7H13 + CH3OH  { a = 1.450e+11 n = 0.000 E = 19.125 }
+MC228: MCH-C7H14 + CH3O -> CYCHEXCH2-C7H13 + CH3OH      { a = 2.170e+11 n = 0.000 E = 27.020 }
+MC224: MCH-C7H14 + CH3O -> MCHR2-C7H13 + CH3OH  { a = 2.900e+11 n = 0.000 E = 19.125 }
+
+MC232: MCH-C7H14 + HO2 -> MCHR2-C7H13 + H2O2    { a = 12.64E1 n = 3.37 E = 57.35 }
+MC233: MCH-C7H14 + HO2 -> MCHR3-C7H13 + H2O2    { a = 12.64E1 n = 3.37 E = 57.35 }
+MC234: MCH-C7H14 + HO2 -> MCHR4-C7H13 + H2O2    { a = 6.32E1 n = 3.37 E = 57.35 }
+MC231: MCH-C7H14 + HO2 -> MCHR1-C7H13 + H2O2    { a = 6.50E+02 n = 3.01 E = 50.536 }
+MC235: MCH-C7H14 + HO2 -> CYCHEXCH2-C7H13 + H2O2  { a = 20.4E0 n = 3.59 E = 71.79}
+
+MC214: MCH-C7H14 + O -> MCHR4-C7H13 + OH        { a = 5.510e+05 n = 2.450 E = 11.841 }
+MC223: MCH-C7H14 + O -> MCHR2-C7H13 + OH        { a = 1.102e+06 n = 2.450 E = 11.841 }
+MC227: MCH-C7H14 + O -> CYCHEXCH2-C7H13 + OH    { a = 9.798e+05 n = 2.430 E = 19.874 }
+MC216: MCH-C7H14 + O -> MCHR1-C7H13 + OH        { a = 3.830e+05 n = 2.410 E =  4.770 }
+MC220: MCH-C7H14 + O -> MCHR3-C7H13 + OH        { a = 1.102e+06 n = 2.450 E = 11.841 }
+
+MC248: MCH-C7H14 + H -> MCHR4-C7H13 + H2        { a = 1.050e+13 n = 0.0 E = 20.827 }#CYCHEX RATEx2/12
+MC249: MCH-C7H14 + H -> MCHR1-C7H13 + H2        { a = 6.020e+05 n = 2.400 E = 10.807 }#LLNL for rest
+MC250: MCH-C7H14 + H -> CYCHEXCH2-C7H13 + H2    { a = 6.651e+05 n = 2.540 E = 28.267 }#LLNL for rest
+MC247: MCH-C7H14 + H -> MCHR2-C7H13 + H2        { a = 2.100e+13 n = 0.0 E = 20.827 }#CYCHEX RATEx4/12
+MC246: MCH-C7H14 + H -> MCHR3-C7H13 + H2        { a = 2.100e+13 n = 0.0 E = 20.827 }#CYCHEX RATEx4/12
+
+MC239: CH3O2 + MCH-C7H14 -> CH3O + OH + MCHR4-C7H13     { a = 10.18  n = 3.58 E = 59.272 }
+MC237: CH3O2 + MCH-C7H14 -> CH3O + OH + MCHR2-C7H13     { a = 20.36  n = 3.58 E = 59.272 }
+MC236: CH3O2 + MCH-C7H14 -> CH3O + OH + MCHR1-C7H13     { a = 2.06E2 n = 3.12 E = 55.134 }
+MC238: CH3O2 + MCH-C7H14 -> CH3O + OH + MCHR3-C7H13     { a = 20.36  n = 3.58 E = 59.272 }
+MC240: CH3O2 + MCH-C7H14 -> CH3O + OH + CYCHEXCH2-C7H13 { a = 0.693  n = 3.97 E = 76.410 }
+
+MC219: MCH-C7H14 -> CH3 + CYCHEXRAD-C6H11        { a = 5.93e+64 n = -14.15 E = 453.471 }#1 ATM FROM ZHANG ET AL 2013 - CHANGE H
+
+#1 ATM FROM ZHANG 2013:
+MC211f: MCH-C7H14 -> C7H14              { a = 5.57E69 n = -15.49 E = 506.524}#1-C7H14
+MC212f: MCH-C7H14 -> C7H14              { a = 9.66E68 n = -15.21 E = 496.312}#2-C7H14
+#WE HAVE C7H14s LUMPED IN BASE MECH.
+
+MC221: MCH-C7H14 + CH3 -> MCHR1-C7H13 + CH4     { a = 6.010e-10 n = 6.362 E =  3.736 }
+MC213: MCH-C7H14 + CH3 -> CYCHEXCH2-C7H13 + CH4 { a = 4.521e-01 n = 3.650 E = 29.932 }
+MC222: MCH-C7H14 + CH3 -> MCHR3-C7H13 + CH4     { a = 3.020e+00 n = 3.460 E = 22.933 }
+MC229: MCH-C7H14 + CH3 -> MCHR4-C7H13 + CH4     { a = 1.510e+00 n = 3.460 E = 22.933 }
+MC225: MCH-C7H14 + CH3 -> MCHR2-C7H13 + CH4     { a = 3.020e+00 n = 3.460 E = 22.933 }
+
+MC217: MCH-C7H14 + O2 -> MCHR3-C7H13 + HO2      { a = 4.000e+13 n = 0.000 E = 207.694 }
+MC226: MCH-C7H14 + O2 -> MCHR2-C7H13 + HO2      { a = 4.000e+13 n = 0.000 E = 207.694 }
+
+# --- MCH1OJ-C7H13O reactions --- #
+
+MC261: MCH1OJ-C7H13O -> CCOCCCCCX-C7H13O	{ a = 2.521e+20 n = -1.368 E = 76.411}#rev from thermodata
+MC260: CCOCCCCCX-C7H13O -> MCH1OJ-C7H13O       { a = 2.160e+07 n = 0.860 E = 42.258 }
+
+MC259: CCOCCCCCX-C7H13O -> C3H6COCH3-1-C5H9O + C2H4     { a = 7.783e+12 n = 0.377 E = 123.238 }
+MC084: C3H6COCH3-1-C5H9O -> C2H4 + CH3COCH2      { a = 2.904e+16 n = -1.210 E = 112.968 }

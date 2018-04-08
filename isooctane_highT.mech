@@ -1,0 +1,147 @@
+#==========================================================================#
+#                                                                          #
+#                      Redcued iso-Octane mechanism                        #
+#            Lawrence Livermore Iso-Octane Mechanism - ver 2e              #
+#                                                                          #
+#        "A Comprehensive Modeling Study of iso-Octane Oxidation"          #
+#      Curran, H. J., Gaffuri, P., Pitz, W. J., and Westbrook, C. K.       #
+#                Combustion and Flame 129:253-280 (2002).                  #
+#                                                                          #
+#        UCRL-WEB-204236 - Review and release date: May 19, 2004.          #
+#                                                                          #
+#==========================================================================#
+
+
+# ------------------- HIGH TEMPERATURE -------------------- #
+# ---------------------- 15 Species ----------------------- #
+# --------------------- 73 Reactions ---------------------- #
+
+# Reactions of I-C8H18
+
+IC00 : I-C8H18 -> Y-C7H15 + CH3			{ A = 1.02E+49 n = -9.38 E = 404.10 }
+IC01 : I-C8H18 -> I-C4H8 + I-C3H7 + CH3		{ A = 5.75E+49 n = -9.66 E = 410.20 }
+IC02 : I-C8H18 -> 2 T-C4H9			{ A = 1.94E+57 n =-11.84 E = 414.13 }
+
+IC03 : I-C8H18 + H     -> C-C8H17 + H2		{ A = 5.15E+01 n =  3.92 E =  10.16 }
+IC04 : I-C8H18 + O     -> C-C8H17 + OH		{ A = 1.25E+04 n =  3.07 E =   5.82 }
+IC05 : I-C8H18 + OH    -> C-C8H17 + H2O		{ A = 1.03E+07 n =  1.99 E =  -1.19 }
+IC06 : I-C8H18 + O2    -> C-C8H17 + HO2		{ A = 1.03E+11 n =  0.84 E = 196.29 }
+IC07 : I-C8H18 + CH3   -> C-C8H17 + CH4	  	{ A = 1.14E-18 n =  9.25 E =  -8.89 }
+IC08 : I-C8H18 + HO2   -> C-C8H17 + H2O2	{ A = 9.85E+10 n =  0.73 E =  70.89 }
+# Reduced by 2
+IC09 : I-C8H18 + CH3O2 -> C-C8H17 + CH3O + OH	{ A = 4.93E+10 n =  0.73 E =  70.89 }
+
+# Reactions of C-C8H17
+
+IC10 : C-C8H17 -> I-C4H8  + T-C4H9		{ A = 4.28E+22 n = -2.81 E = 127.70 }
+IC11 : C-C8H17 -> Y-C7H14 + CH3			{ A = 2.55E+39 n = -7.47 E = 189.48 }
+IC12 : C-C8H17 -> I-C4H8 + CH3 + C3H6		{ A = 4.22E+24 n = -3.34 E = 158.66 }
+
+IC13 : C-C8H17 + HO2   -> D-C8H17O + OH		{ A = 7.00E+12 n =   .00 E =  -4.18 }
+IC14 : C-C8H17 + CH3O2 -> D-C8H17O + CH3O	{ A = 7.00E+12 n =   .00 E =  -4.18 }
+
+# Reactions of D-C8H17O
+
+IC15 : D-C8H17O -> I-C4H8 + CH3 + CH3COCH3	{ A = 1.33E+23 n = -2.98 E =  64.44 }
+IC16 : D-C8H17O -> T-C4H9 + I-C3H7 + HCO	{ A = 7.95E+33 n = -6.00 E =  97.57 }
+IC17 : D-C8H17O -> Y-C7H15 + CH2O		{ A = 2.69E+20 n = -2.08 E =  62.99 }
+
+# Reactions of Y-C7H15
+
+IC18 : Y-C7H14 + H -> Y-C7H15			{ A = 7.92E+16 n = -1.01 E =  15.98 }
+IC19 : Y-C7H15 -> Y-C7H14 + H			{ A = 1.83E+17 n = -0.90 E = 165.71 }
+IC20 : Y-C7H15 -> I-C4H8  + I-C3H7		{ A = 1.94E+18 n = -1.49 E = 136.77 }
+IC21 : Y-C7H15 -> T-C4H9  + C3H6		{ A = 1.12E-44 n = 15.73 E = -65.59 }
+
+# Reactions of Y-C7H14
+
+IC22 : Y-C7H14 -> I-C4H7 + I-C3H7		{ A = 6.53E+59 n =-12.99 E = 394.69 }
+IC23 : Y-C7H14 -> T-C4H9 + A-C3H5		{ A = 2.09E+65 n =-14.94 E = 384.52 }
+
+IC24 : Y-C7H14 + H  -> X-C7H13 + H2		{ A = 2.38E-13 n =  7.67 E = -47.65 }
+IC25 : X-C7H13 + H2 -> Y-C7H14 + H		{ A = 3.93E+06 n =  2.36 E =  92.29 }
+
+IC26 : Y-C7H14 + OH  -> X-C7H13 + H2O		{ A = 7.76E-09 n =  6.18 E = -41.33 }
+IC27 : X-C7H13 + H2O -> Y-C7H14 + OH		{ A = 1.92E+05 n =  2.76 E = 159.33 }
+
+# Reactions of X-C7H13
+
+IC28 : X-C7H13 + HO2 -> I-C3H5CHO + I-C3H7 + OH	{ A = 1.00E+13 n =  .00 E =    .00 }
+
+# Reactions of T-C4H9O
+
+IC29 : T-C4H9O -> I-C3H7 + HCO + H		{ A = 1.78E+39 n = -7.30 E = 156.05 }
+IC30 : T-C4H9O -> CH2O + I-C3H7			{ A = 7.25E+39 n = -7.59 E = 140.03 }
+IC31 : T-C4H9O -> CH3COCH3 + CH3		{ A = 3.09E+13 n =  0.03 E =  58.87 }
+
+# Reactions of T-C4H9
+
+IC32 : T-C4H9 -> C3H6 + CH3			{ A = 1.34E+71 n =-17.29 E = 263.24 }
+IC33 : T-C4H9 -> H + I-C4H8			{ A = 7.84E+45 n = -9.64 E = 226.42 }
+IC34 : I-C4H8 + H -> T-C4H9			{ A = 2.14E+41 n = -8.43 E =  60.54 }
+
+IC35 : T-C4H9 + HO2   -> T-C4H9O + OH		{ A = 7.00E+12 n =   .00 E =  -4.18 }
+IC36 : T-C4H9 + CH3O2 -> T-C4H9O + CH3O		{ A = 7.00E+12 n =   .00 E =  -4.18 }
+
+# Reactions of I-C4H8
+
+IC37 : I-C4H8 -> T-C3H5 + CH3			{ A = 1.92E+66 n =-14.22 E = 535.97 }
+IC38f: I-C4H8 -> I-C4H7 + H			{ A = 3.07E+55 n =-11.49 E = 478.23 }
+IC40 : I-C4H8 + H -> C3H6 + CH3			{ A = 5.68E+33 n = -5.72 E =  83.68 }
+
+IC41f: I-C4H8 + H     -> I-C4H7 + H2		{ A = 3.40E+05 n =  2.50 E =  10.43 }
+IC42 : I-C4H8 + O     -> I-C4H7 + OH		{ A = 1.21E+11 n =  0.70 E =  31.94 }
+IC43 : I-C4H8 + OH    -> I-C4H7 + H2O		{ A = 5.20E+06 n =  2.00 E =  -1.25 }
+IC44 : I-C4H8 + CH3   -> I-C4H7 + CH4		{ A = 4.42E+00 n =  3.50 E =  23.74 }
+IC45 : I-C4H8 + HO2   -> I-C4H7 + H2O2		{ A = 1.93E+04 n =  2.60 E =  58.20 }
+IC46 : I-C4H8 + CH3O2 -> I-C4H7 + CH3O + OH	{ a = 1.93E+04 n =  2.60 E =  58.20 }
+
+IC47 : I-C4H8 + O -> I-C3H7 + HCO		{ A = 1.58E+07 n =  1.76 E =  -5.09 }
+IC48 : I-C4H8 + O -> CH2CO + 2 CH3		{ A = 3.33E+07 n =  1.76 E =   0.32 }
+
+# Reactions of I-C4H7O
+
+IC49 : I-C4H7O -> T-C3H5 + CH2O			{ A = 1.01E+18 n = -1.45 E = 129.04 }
+IC50 : I-C4H7O -> I-C3H5CHO + H		  	{ A = 5.00E+13 n =   .00 E = 121.75 }
+IC51 : I-C4H7O + O2 -> I-C3H5CHO + HO2		{ A = 3.00E+10 n =   .00 E =   6.90 }
+
+# Reactions of I-C4H7
+
+IC52 : I-C4H7 -> A-C3H4 + CH3			{ A = 1.23E+47 n = -9.74 E = 310.70 }
+
+# From C2H5 + HO2
+# Ludwig et al. .2006
+IC57 : I-C4H7 + HO2   -> I-C4H7O + OH		{ A = 3.10E+13 n =   .00 E =    .00 }
+
+# Change of products
+IC53 : I-C4H7 + O     -> I-C4H7O		{ A = 6.03E+13 n =   .00 E =    .00 }
+
+IC54 : I-C4H7 + O2    -> I-C3H5CHO + OH		{ A = 2.47E+13 n = -0.45 E =  96.32 }
+IC55 : I-C4H7 + O2    -> CH2CO  + CH2O + CH3	{ A = 7.14E+15 n = -1.21 E =  88.07 }
+IC56 : I-C4H7 + O2    -> A-C3H4 + CH2O + OH	{ A = 7.29E+29 n = -5.71 E =  89.75 }
+IC58 : I-C4H7 + CH3O2 -> I-C4H7O + CH3O		{ A = 7.00E+12 n =   .00 E =  -4.18 }
+
+# Reactions of I-C3H5CHO
+
+IC59 : I-C3H5CHO + H   -> T-C3H5 + CO + H2	{ A = 2.60E+12 n =   .00 E =  10.88 }
+IC60 : I-C3H5CHO + O   -> T-C3H5 + CO + OH	{ A = 7.18E+12 n =   .00 E =   5.81 }
+IC61 : I-C3H5CHO + OH  -> T-C3H5 + CO + H2O	{ A = 2.69E+10 n =  0.76 E =  -1.42 }
+IC62 : I-C3H5CHO + HO2 -> T-C3H5 + CO + H2O2	{ A = 1.00E+12 n =   .00 E =  49.87 }
+IC63 : I-C3H5CHO + CH3 -> T-C3H5 + CO + CH4	{ A = 3.98E+12 n =   .00 E =  36.40 }
+
+# Reactions of I-C3H7
+
+IC64 : I-C3H7 -> C2H4 + CH3			{ A = 9.77E-09 n =  5.36 E =  71.25 }
+IC65 : I-C3H7 -> C3H6 + H			{ A = 9.88E+18 n = -1.59 E = 168.82 }
+
+IC66 : C3H6 + H   -> I-C3H7			{ A = 1.73E+13 n =  0.03 E =   7.52 }
+IC67 : C2H4 + CH3 -> I-C3H7			{ A = 4.10E+11 n =   .00 E =  30.14 }
+
+IC68 : I-C3H7 + O2 -> C3H6 + HO2		{ A = 7.65E+11 n = -0.06 E =  21.53 }
+
+# Reactions of CH3COCH3
+
+IC69 : CH3COCH3 + H   -> CH2CO + CH3 + H2	{ A = 5.63E+07 n =  2.00 E =  32.22 }
+IC70 : CH3COCH3 + O   -> CH2CO + CH3 + OH	{ A = 1.13E+14 n =   .00 E =  32.84 }
+IC71 : CH3COCH3 + OH  -> CH2CO + CH3 + H2O	{ A = 1.05E+10 n =  0.97 E =   6.64 }
+IC72 : CH3COCH3 + HO2 -> CH2CO + CH3 + H2O2	{ A = 1.70E+13 n =   .00 E =  85.61 }

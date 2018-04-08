@@ -1,0 +1,23 @@
+
+# **** Third Body *****
+Let [M3] = 2.00 [H2] + 12.00 [H2O] + 1.75 [CO] + 3.60 [CO2] + 0.70 [AR] + 2 [CH4] + 3 [C2H6] + 1.0 [OTHER].
+Let [M6] = 2.00 [H2] +  6.00 [H2O] + 1.75 [CO] + 3.60 [CO2] + 0.70 [AR] + 2 [CH4] + 3 [C2H6] + 1.0 [OTHER].
+Let [M9] = 2.00 [H2] +  6.00 [H2O] + 1.50 [CO] + 2.00 [CO2] + 0.70 [AR] + 3 [CH4] + 3 [C2H6] + 1.0 [OTHER].
+# Heptane/Octane third bodies
+Let [M0] =  + 1.0 [OTHER].
+#Updated H2/O2 third bodies - Burke et al 2012
+Let [M11] = 2.50 [H2] + 12.00 [H2O] + 1.90 [CO] + 3.80 [CO2] + 0.00 [AR] + 0.00 [HE] + 1.0 [OTHER]. 
+Let [M12] = 2.50 [H2] + 12.00 [H2O] + 0.00 [AR] + 1.90 [CO] + 3.80 [CO2] + 0.00 [HE] + 1.0 [OTHER]. 
+Let [M13] = 2.50 [H2] + 12.00 [H2O] + 0.75 [AR] + 1.90 [CO] + 3.80 [CO2] + 0.75 [HE] + 1.0 [OTHER]. 
+Let [M14] = 3.00 [H2] + 0.00 [H2O] + 2.00 [N2] + 1.50 [O2] + 1.90 [CO] + 3.80 [CO2] + 1.10 [HE] + 1.0 [OTHER]. 
+
+##This one below if bath gas in N2
+# Let [M15] = 2.00 [H2] + 14.00 [H2O] + 0.78 [O2] + 1.90 [CO] + 3.80 [CO2] + 0.67 [AR] + 0.80 [HE] + 1.0 [OTHER].
+# This one if bath gas is AR/HE
+Let [M15] = 3.00 [H2] + 21.00 [H2O] + 1.10 [O2] + 2.70 [CO] + 5.40 [CO2] + 1.20 [HE] + 1.50 [N2] + 1.0 [OTHER].
+
+Let [M16] = 7.50 [H2O] + 1.60 [CO2] + 1.50 [N2] + 1.20 [O2] + 7.70 [H2O2] + 3.70 [H2] + 2.80 [CO] + 0.65 [HE] +  1.0 [OTHER]. 
+
+#CO third bodies
+Let [M20] = + 2 [H2] + 3.6 [CO2] + 1.75 [CO] + 0.7 [AR] + 12 [H2O] + 1.0 [OTHER].
+Let [M21] = + 2 [H2] + 3.6 [CO2] + 1.75 [CO] + 0 [H2O] + 1.0 [OTHER].

@@ -1,0 +1,167 @@
+
+
+#==========================================================================#
+#                                                                          #
+#                       Reduced Heptane mechanism                          #
+#           Lawrence Livermore n-Heptane Mechanism - ver 2b                #
+#                                                                          #
+#        "A Comprehensive Modeling Study of n-Heptane Oxidation"           #
+#     Curran, H. J., Gaffuri, P., Pitz, W. J., and Westbrook, C. K.        #
+#                 Combustion and Flame 114:149-177 (1998).                 #
+#                                                                          #
+#       UCRL-WEB-204236 - Review and release date: May 19, 2004.           #
+#                                                                          #
+#==========================================================================#
+
+
+# ------------------- HIGH TEMPERATURE -------------------- #
+# ---------------------- 14 Species ----------------------- #
+# --------------------- 83 Reactions ---------------------- #
+
+# Reactions of N-C7H16
+
+HP00 : N-C7H16 -> C5H11 + C2H5			{ A = 8.10E+77 n =-17.62 E = 503.75 }
+HP01 : N-C7H16 -> P-C4H9 + N-C3H7		{ A = 1.42E+78 n =-17.71 E = 505.01 }
+
+HP02 : N-C7H16 + H   -> C7H15 + H2		{ A = 1.75E+06 n =  2.60 E =  18.25 }
+HP03 : N-C7H16 + O   -> C7H15 + OH		{ A = 1.72E+05 n =  2.81 E =   9.46 }
+HP04 : N-C7H16 + OH  -> C7H15 + H2O		{ A = 7.40E+08 n =  1.50 E =   1.08 }
+HP05 : N-C7H16 + O2  -> C7H15 + HO2		{ A = 2.89E+13 n =  0.20 E = 209.66 }
+HP06 : N-C7H16 + HO2 -> C7H15 + H2O2		{ A = 7.57E+12 n =  0.21 E =  73.78 }
+
+HP08 : C7H15 + H   -> N-C7H16	 		{ A = 1.21E+81 n =-19.78 E = 163.27 }
+HP09 : C7H15 + HO2 -> N-C7H16 + O2	    	{ A = 1.16E+08 n =  0.98 E =  -6.40 }
+
+# Reactions of C7H15
+
+HP10 : C7H15 -> C5H11  + C2H4			{ A = 1.89E+12 n =  0.02 E = 116.25 }
+HP11 : C7H15 -> P-C4H9 + C3H6			{ A = 7.73E+18 n = -1.75 E = 133.78 }
+HP12 : C7H15 -> N-C3H7 + P-C4H8			{ A = 2.53E+18 n = -1.65 E = 132.56 }
+HP13 : C7H15 -> C2H5   + C5H10			{ A = 2.49E+16 n = -1.18 E = 123.50 }
+
+HP14 : C7H15 -> C7H14 + H			{ A = 1.41E+15 n = -0.53 E = 156.52 }
+HP15 : C7H14 + H -> C7H15			{ A = 6.66E+11 n =  0.45 E =   8.43 }
+
+HP16 : C7H15 + HO2   -> C7H15O + OH		{ A = 7.00E+12 n =   .00 E =  -4.18 }
+HP17 : C7H15 + CH3O2 -> C7H15O + CH3O		{ A = 7.00E+12 n =   .00 E =  -4.18 }
+
+# Reactions of C7H15O
+
+HP18 : C7H15O -> C3H7CHO + N-C3H7		{ A = 6.18E+16 n = -1.36 E =  77.48 }
+HP19 : C7H15O -> C2H5 + HCO + P-C4H9		{ A = 2.23E+15 n = -0.70 E =  77.85 }
+HP20 : C7H15O -> CH3CHO + C5H11			{ A = 8.92E+19 n = -2.03 E =  87.88 }
+
+# Reactions of C7H14
+
+HP21 : C7H14 -> C4H7 + N-C3H7			{ a = 2.500e+16 n = 0.000 E = 297.064 }#CORRECTION
+HP22 : C7H14 -> P-C4H9 + A-C3H5			 {a = 2.500e+16 n = 0.000 E = 297.064 }#CORRECTION
+
+#CORRECTION ON H-ABSTR FROM C7H14!! - INTRODUCED IN DD MECHANISM
+HP23f: C7H14 + H   -> C7H13 + H2			{ A = 9.10E+06 n =  2.40 E =  18.707  }
+HP24 : C7H14 + OH  -> C7H13 + H2O			{ A = 3.276E+08 n = 1.610 E =  -0.146 }
+
+HP25 : C7H14 + OH -> CH3CHO + C5H11		{ A = 9.87E+22 n = -3.62 E =  12.15 }
+HP26 : C7H14 + OH -> C2H5 + HCO + P-C4H9	{ A = 2.07E+16 n = -1.65 E =  -7.63 }
+
+# Reactions of C7H13
+
+#CHANGES INTRODUCED IN DD MECHANISM
+HP27 : C7H13 -> A-C3H5 + P-C4H8			{ a = 2.0E+12    n = 0.000 E = 125.4 }
+HP28 : C7H13 -> C4H7 + C3H6			{ a = 2.0E+12    n = 0.000 E = 125.4 }
+
+# Reactions of C5H11
+
+HP29 : C5H11 -> C2H4 + N-C3H7			{ A = 7.46E+21 n = -2.61 E = 134.00 }
+
+HP30 : C5H11 -> H + C5H10			{ A = 8.46E+14 n = -0.47 E = 157.39 }
+HP31 : C5H10 + H -> C5H11			{ A = 7.10E+12 n =  0.12 E =   6.11 }
+HP32 : C5H11 -> C3H6 + C2H5			{ A = 3.15E-19 n =  8.84 E =  29.73 }
+
+# Reactions of C5H10
+
+HP33 : C5H10 -> C2H5 + A-C3H5			{ A = 9.17E+20 n = -1.63 E = 309.57 }
+
+HP34 : C5H10 + H   -> C5H9 + H2			{ A = 2.80E+13 n =   .00 E =  16.74 }
+HP35 : C5H10 + O   -> C5H9 + OH			{ A = 2.54E+05 n =  2.56 E =  -4.73 }
+HP36 : C5H10 + OH  -> C5H9 + H2O		{ A = 5.12E+06 n =  2.00 E =  -1.25 }
+
+# Reactions of C5H9
+
+HP37 : C5H9 -> A-C3H5 + C2H4			{ A = 2.50E+13 n =   .00 E = 188.28 }
+HP38 : C5H9 -> C4H6 + CH3			{ A = 1.34E+15 n = -0.52 E = 160.33 }
+
+# Reactions of P-C4H9
+
+HP39 : P-C4H9 -> P-C4H8 + H			{ A = 8.61E+17 n = -1.40 E = 162.80 }
+HP40 : P-C4H8 + H -> P-C4H9			{ A = 7.68E+12 n =  0.11 E =   6.19 }
+
+HP41 : P-C4H9 -> C2H5 + C2H4			{ A = 8.39E+14 n = -0.64 E = 112.57 }
+HP42 : P-C4H9 -> C3H6 + CH3			{ A = 1.00E+31 n = -5.43 E = 177.85 }
+
+# Reactions of P-C4H8 reactions
+
+HP43 : P-C4H8 -> A-C3H5 + CH3			{ A = 5.00E+15 n =   .00 E = 297.06 }
+
+HP44 : P-C4H8 + H   -> C4H7 + H2		{ A = 5.00E+13 n =   .00 E =  16.32 }
+HP45 : P-C4H8 + OH  -> C4H7 + H2O		{ A = 2.25E+13 n =   .00 E =   9.28 }
+HP46 : P-C4H8 + O2  -> C4H7 + HO2		{ A = 2.70E+13 n =   .00 E = 138.91 }
+HP47 : P-C4H8 + HO2 -> C4H7 + H2O2		{ A = 1.40E+12 n =   .00 E =  62.34 }
+HP48 : P-C4H8 + CH3 -> C4H7 + CH4		{ A = 1.00E+11 n =   .00 E =  30.54 }
+
+HP49 : C4H7 + H   -> P-C4H8	      		{ A = 5.00E+13 n =   .00 E =    .00 }
+HP50 : C4H7 + HO2 -> P-C4H8 + O2		{ A = 3.00E+11 n =   .00 E =    .00 }
+
+HP51 : P-C4H8 + O  -> CH3CHO  + C2H4		{ A = 1.30E+13 n =   .00 E =   3.56 }
+HP52 : P-C4H8 + O  -> C2H5 + CH3 + CO		{ A = 1.30E+13 n =   .00 E =   3.56 }
+HP53 : P-C4H8 + O  -> C3H6 + CH2O		{ A = 7.23E+05 n =  2.34 E =  -4.39 }
+HP54 : P-C4H8 + O  -> C2H5 + HCO + T-CH2	{ A = 1.30E+13 n =   .00 E =   3.56 }
+HP55 : P-C4H8 + OH -> N-C3H7 + CH2O		{ A = 1.00E+12 n =   .00 E =    .00 }
+HP58 : P-C4H8 + OH -> C2H6 + CH3 + CO		{ A = 5.00E+11 n =   .00 E =    .00 }
+HP56 : P-C4H8 + OH -> C2H5 + CH3 + HCO		{ A = 1.00E+12 n =   .00 E =    .00 }
+HP57 : P-C4H8 + OH -> C2H5 + CH3CHO		{ A = 1.00E+12 n =   .00 E =    .00 }
+
+# Reactions of C3H7CHO
+
+HP59 : C3H7CHO + H   -> N-C3H7 + CO + H2	{ A = 4.00E+13 n =   .00 E =  17.57 }
+HP60 : C3H7CHO + OH  -> N-C3H7 + CO + H2O	{ A = 2.69E+10 n =   .76 E =  -1.42 }
+HP61 : C3H7CHO + O2  -> N-C3H7 + CO + HO2	{ A = 2.00E+13 n =   .50 E = 176.57 }
+HP62 : C3H7CHO + CH3 -> N-C3H7 + CO + CH4	{ A = 1.70E+12 n =   .00 E =  35.31 }
+HP63 : C3H7CHO + HO2 -> N-C3H7 + CO + H2O2	{ A = 2.80E+12 n =   .00 E =  56.90 }
+
+# Reactions of C4H7
+
+# *** UPDATED ***
+# Revised C4H7 system - Exp. + Calc.
+# Shestov, Popov, Slagle & Knyazev 2005
+# Ismail, Georgievskii, Taatjes, et al. 2007
+# Rates fitted at P=1.33bar
+HP64f: C4H7 -> C4H6 + H				{ A = 5.01E+31 n = -5.90 E = 162.29 }
+HP65f: C2H4 + C2H3 -> C4H7			{ A = 1.88E+06 n =  1.84 E =  12.80 }
+
+HP67 : C4H7 + H      -> C4H6 + H2		{ A = 3.16E+13 n =   .00 E =    .00 }
+HP68 : C4H7 + O2     -> C4H6 + HO2		{ A = 1.00E+09 n =   .00 E =    .00 }
+HP69 : C4H7 + CH3    -> C4H6 + CH4		{ A = 8.00E+12 n =   .00 E =    .00 }
+HP70 : C4H7 + C2H5   -> C4H6 + C2H6		{ A = 3.98E+12 n =   .00 E =    .00 }
+HP71 : C4H7 + A-C3H5 -> C4H6 + C3H6		{ A = 6.31E+12 n =   .00 E =    .00 }
+
+HP72 : C4H7 + HO2    -> C4H7O + OH		{ A = 7.00E+12 n =   .00 E =  -4.18 }
+HP73 : C4H7 + CH3O2  -> C4H7O + CH3O		{ A = 7.00E+12 n =   .00 E =  -4.18 }
+
+# Reactions of C4H7O
+
+HP74 : C4H7O -> CH3CHO + C2H3			{ A = 7.94E+14 n =   .00 E =  79.50 }
+HP75 : C4H7O -> C2H3CHO + CH3			{ A = 7.94E+14 n =   .00 E =  79.50 }
+
+# Reactions of N-C3H7O
+
+HP76 : N-C3H7 + HO2   -> N-C3H7O + OH		{ A = 7.00E+12 n =   .00 E =  -4.18 }
+HP77 : N-C3H7 + CH3O2 -> N-C3H7O + CH3O		{ A = 7.00E+12 n =   .00 E =  -4.18 }
+
+HP78 : N-C3H7O -> C2H5 + CH2O	    		{ A = 1.39E+16 n = -0.87 E =  82.72 }
+HP79 : N-C3H7O -> C2H5 + HCO + H		{ A = 2.51E+14 n =   .00 E =  97.91 }
+
+# Reactions of C4H6
+
+HP86 : C4H6 + O  -> C2H4 + CH2CO		{ A = 1.00E+12 n =   .00 E =    .00 }
+HP87 : C4H6 + OH -> C2H5 + CH2CO		{ A = 1.00E+12 n =   .00 E =    .00 }
+HP88 : C4H6 + OH -> C2H3 + CH3CHO		{ A = 1.00E+12 n =   .00 E =    .00 }

@@ -1,0 +1,579 @@
+#==========================================================================#
+#                                                                          #
+#                           Toluene chemistry                              #
+#                                                                          #
+#     "Investigation of the reaction of toluene with molecular oxygen      #
+#                         in shock-heated gases"                           #
+#                 Oehlschlaeger, Davidson & Hanson 2006                    #
+#                   Combust. Flame 147 (2006) 195-208                      #
+#                                                                          #
+#==========================================================================#
+# Toluene / Benzyl decomposition
+# ------------------------------
+# Tokmakov et al. 2001 (x1.2 to match exp.)
+
+T01f: A1CH3-C7H8 + H -> A1-C6H6 + CH3                     { A = 2.31E+06 n = 2.17 E = 17.42 }
+
+
+# Klippenstein et al. 2007
+# Almost indep or pressure => HPL
+
+T02f: A1CH3-C7H8 -> A1CH2-C7H7 + H                       { A = 1.56E+13 n = 0.68 E = 373.24 }
+T03f: A1CH3-C7H8 -> A1--C6H5 + CH3                      { A = 4.35E+22 n = -1.73 E = 436.01 }
+
+
+# P=1bar  - 1000K-2500K
+
+T04f: A1CH2-C7H7 + H -> A1--C6H5 + CH3                 { A = 5.83E+67 n = -14.15 E = 285.89 }
+
+
+# P=10bar - 1200K-2500K
+# Rate from Oehlschlaeger et al. 2006 (1.5 atm) (25%)
+
+T05f: A1CH2-C7H7 -> C5H5 + C2H2                           { A = 8.20E+14 n = .00 E = 337.55 }
+
+
+# Toluene
+# -------
+# Oehlschlaeger et al. 2006 (1.5 atm) (20%)
+
+T06f: A1CH3-C7H8 + O2 -> A1CH2-C7H7 + HO2                { A = 2.18E+07 n = 2.50 E = 192.65 }
+
+
+# Oehlschlaeger et al. 2006 (1.5 atm) (25%)
+
+T07f: A1CH3-C7H8 + H -> A1CH2-C7H7 + H2                   { A = 6.47E+00 n = 3.98 E = 14.16 }
+
+
+# Seta, Nakajima & Miyoshi 2006 (35%)
+# Better match with Vasudevan, Davidson & Hanson 2005
+
+T08f: A1CH3-C7H8 + OH -> A1CH2-C7H7 + H2O                 { A = 1.77E+05 n = 2.39 E = -2.52 }
+T09f: A1CH3-C7H8 + OH -> A1OH-C6H6O + CH3                 { A = 7.83E+02 n = 2.88 E = 13.48 }
+T10f: A1CH3-C7H8 + OH -> HOA1CH3-C7H8O + H                { A = 3.14E+01 n = 3.37 E = 19.75 }
+
+
+# *** NEW ***
+# From C3H8+O (x0.5)
+
+T11f: A1CH3-C7H8 + O -> A1CH2-C7H7 + OH                   { A = 1.18E+00 n = 4.09 E = 10.65 }
+
+
+# *** NEW ***
+# From A1+O (x5/6)
+
+T12f: A1CH3-C7H8 + O -> HOA1CH3-C7H8O                     { A = 1.69E+12 n = 0.30 E = 18.42 }
+T13f: A1CH3-C7H8 + O -> OA1CH3-C7H7O + H                  { A = 1.66E+07 n = 1.80 E = 16.63 }
+
+
+# From C2H6+R (x0.5)
+
+T14f: A1CH3-C7H8 + CH3 -> A1CH2-C7H7 + CH4                 { A = 4.22E+14 n = .00 E = 93.12 }
+
+
+# Baulch et al. 2005
+
+T15f: A1CH3-C7H8 + HO2 -> A1CH2-C7H7 + H2O2               { A = 9.33E+04 n = 2.50 E = 61.44 }
+
+
+# Heckmann, Hippler & Troe 1996
+
+T16f: A1CH3-C7H8 + A1--C6H5 -> A1CH2-C7H7 + A1-C6H6        { A = 7.94E+13 n = .00 E = 50.00 }
+
+
+# Benzyl radical
+# --------------
+# Baulch et al. 2005 - k=3.3e14
+# Reduced to collision limit rate at T=298K
+
+T17f: A1CH2-C7H7 + O -> A1CH2O-C7H7O                         { A = 2.28E+14 n = .00 E = .00 }
+
+
+# Hippler, Reihs & Troe 1991
+
+T18f: A1CH2-C7H7 + OH -> A1CH2OH-C7H8O                       { A = 2.00E+13 n = .00 E = .00 }
+
+
+# da Silva & Bozzelli 2008
+
+T19f: A1CH2-C7H7 + HO2 -> A1CH2O-C7H7O + OH               { A = 1.19E+09 n = 1.03 E = -9.41 }
+
+
+# From A-C3H5 + C3H3 (x2.0)
+
+T20: A1CH2-C7H7 + C3H3 -> A2-C10H8 + 2 H                 { A = 4.32E+39 n = -7.74 E = 99.80 }
+
+
+# *** NEW ***
+# Murakami et al. 2007 - HPL
+# Canneaux et al. 2008 - Benzylperoxy isomerization
+# Benzylperoxy in Steady State
+
+T21f: A1CH2-C7H7 + O2 -> A1CHO-C7H6O + OH                { A = 3.76E+15 n = -1.55 E = 47.37 }
+
+
+# From A-C3H5 + O2
+
+T22f: A1CH2-C7H7 + O2 -> A1O-C6H5O + CH2O                { A = 6.26E+37 n = -8.86 E = 69.38 }
+
+
+# Benzyl Alcohol / Alcoxy Benzyl
+# ------------------------------
+# From CH3OH+R->CH3O+RH
+
+T23f: A1CH2O-C7H7O + H + M3 -> A1CH2OH-C7H8O + M3          { A = 4.66E+41 n = -7.44 E = 58.91
+                                                            Ai= 2.43E+12 ni=   .52 Ei=   0.21
+                                                                        fcA = 0.30 fctA = 100
+                                                                     fcb = 0.70 fctb = 90000 
+                                                                   fcc = 1.0  fctc = 10000  }
+T24f: A1CH2OH-C7H8O + H -> A1CH2O-C7H7O + H2              { A = 4.20E+06 n = 2.10 E = 20.38 }
+T25f: A1CH2OH-C7H8O + O -> A1CH2O-C7H7O + OH              { A = 1.30E+05 n = 2.50 E = 20.92 }
+T26f: A1CH2OH-C7H8O + OH -> A1CH2O-C7H7O + H2O             { A = 6.30E+06 n = 2.00 E = 6.28 }
+T27f: A1CH2OH-C7H8O + CH3 -> A1CH2O-C7H7O + CH4           { A = 1.00E+07 n = 1.50 E = 41.59 }
+
+
+# Choi, Xia, Park & Lin 2000
+# Xia & Lin 2000
+
+T28f: A1--C6H5 + CH2O -> A1-C6H6 + HCO                     { A = 8.55E+04 n = 2.19 E = 0.16 }
+
+
+# da Silva & Bozzelli 2009 - P=1atm
+
+T29f: A1CH2O-C7H7O -> A1CHO-C7H6O + H                    { A = 5.26E+28 n = -5.08 E = 93.09 }
+T30f: A1CH2O-C7H7O -> A1--C6H5 + CH2O                   { A = 7.21E+33 n = -6.21 E = 154.18 }
+T31f: A1CH2O-C7H7O -> A1-C6H6 + HCO                     { A = 2.37E+32 n = -6.10 E = 120.54 }
+
+
+# From CH3O+R->CH2O+RH (x2/3)
+
+T32f: A1CH2O-C7H7O + H -> A1CHO-C7H6O + H2                   { A = 1.33E+13 n = .00 E = .00 }
+T33f: A1CH2O-C7H7O + O -> A1CHO-C7H6O + OH                   { A = 6.67E+12 n = .00 E = .00 }
+T34f: A1CH2O-C7H7O + OH -> A1CHO-C7H6O + H2O                 { A = 3.33E+12 n = .00 E = .00 }
+
+
+# *** NEW ***
+# From CH3O (x2/3)
+
+T35f: A1CH2O-C7H7O + O2 -> A1CHO-C7H6O + HO2             { A = 2.85E-13 n = 7.60 E = -14.77 }
+
+
+# Benzaldehyde
+# ------------
+# From CH3CHO - Baulch et al. 2005
+# Grela & Colussi 1986 - Loss of H then loss of CO
+
+T36: A1CHO-C7H6O -> A1--C6H5 + CO + H                     { A = 2.10E+16 n = .00 E = 342.00 }
+
+
+# From CH3CHO
+# Baulch et al. 2005
+
+T37: A1CHO-C7H6O + H -> A1--C6H5 + CO + H2                { A = 4.09E+09 n = 1.16 E = 10.06 }
+T38: A1CHO-C7H6O + O -> A1--C6H5 + CO + OH                  { A = 5.84E+12 n = .00 E = 7.57 }
+T39: A1CHO-C7H6O + OH -> A1--C6H5 + CO + H2O              { A = 2.89E+08 n = 1.35 E = -6.58 }
+T40: A1CHO-C7H6O + O2 -> A1--C6H5 + CO + HO2             { A = 1.20E+05 n = 2.50 E = 157.13 }
+T41: A1CHO-C7H6O + HO2 -> A1--C6H5 + CO + H2O2            { A = 4.09E+04 n = 2.50 E = 42.69 }
+T42: A1CHO-C7H6O + CH3 -> A1--C6H5 + CO + CH4              { A = 3.49E-08 n = 6.21 E = 6.82 }
+
+
+# Cresol
+# All isomers lumped into meta
+# ----------------------------
+# From A1OH/A1O
+
+T43f: HOA1CH3-C7H8O -> OA1CH3-C7H7O + H                { A = 1.01E+71 n = -15.92 E = 522.12 }
+T44f: HOA1CH3-C7H8O + H -> OA1CH3-C7H7O + H2               { A = 1.15E+14 n = .00 E = 51.87 }
+T45f: HOA1CH3-C7H8O + O -> OA1CH3-C7H7O + OH               { A = 2.81E+13 n = .00 E = 30.76 }
+T46f: HOA1CH3-C7H8O + OH -> OA1CH3-C7H7O + H2O            { A = 2.95E+06 n = 2.00 E = -5.49 }
+T47: OA1CH3-C7H7O -> C5H4CH2 + CO + H                     { A = 2.90E+10 n = .00 E = 152.40 }
+
+
+# *** NEW ***
+# Methyl-phenyl
+# All isomers lumped into meta
+# ----------------------------
+# From A1 (x0.65)
+# From symmetry should be x5/6
+# Seta, Nakajima & Miyoshi 2006 - Rate for OH - Same as A1 x0.65
+
+T50f: A1CH3-C7H8 -> A1CH3*-C7H7 + H                    { A = 8.39E+60 n = -12.48 E = 619.59 }
+T51f: A1CH3-C7H8 + H -> A1CH3*-C7H7 + H2                  { A = 3.91E+08 n = 1.80 E = 68.42 }
+T52f: A1CH3-C7H8 + O -> A1CH3*-C7H7 + OH                   { A = 2.60E+13 n = .00 E = 61.50 }
+T53f: A1CH3-C7H8 + OH -> A1CH3*-C7H7 + H2O                 { A = 1.36E+04 n = 2.69 E = 2.59 }
+T54f: A1CH3-C7H8 + CH3 -> A1CH3*-C7H7 + CH4               { A = 1.79E-02 n = 4.46 E = 57.06 }
+
+
+# From A1-
+
+T55f: A1CH3*-C7H7 + O -> OA1CH3-C7H7O                        { A = 1.00E+14 n = .00 E = .00 }
+T56f: A1CH3*-C7H7 + OH -> OA1CH3-C7H7O + H                   { A = 3.00E+13 n = .00 E = .00 }
+T57f: A1CH3*-C7H7 + HO2 -> OA1CH3-C7H7O + OH                 { A = 3.00E+13 n = .00 E = .00 }
+
+
+# da Silva, Chen & Bozzelli 2007
+# Assumed products for methyloxepinoxy decomposition
+
+T58f: A1CH3*-C7H7 + O2 -> OA1CH3-C7H7O + O               { A = 8.57E+20 n = -2.27 E = 30.08 }
+T59: A1CH3*-C7H7 + O2 -> C5H4CH2 + CO2 + H               { A = 2.55E+13 n = -0.44 E = -6.90 }
+T60: A1CH3*-C7H7 + O2 -> P-C3H4 + C2H3 + CO + CO         { A = 2.55E+13 n = -0.44 E = -6.90 }
+
+
+#==========================================================================#
+#                                                                          #
+#                         Ethyl-Benzene chemistry                          #
+#                                                                          #
+#             Adapted from C3H8 and Toluene/Benzene chemistry              #
+#                                                                          #
+#==========================================================================#
+# Ethylbenzene
+# ------------
+# Estimated from C3H7+H - HPL
+
+E01f: A1C2H4-C8H9 + H -> A1C2H5-C8H10                        { A = 3.61E+13 n = .00 E = .00 }
+
+
+# Estimated from C2H5+CH3 - HPL
+
+E02f: A1CH2-C7H7 + CH3 -> A1C2H5-C8H10                       { A = 2.00E+13 n = .00 E = .00 }
+E03f: A1--C6H5 + C2H5 -> A1C2H5-C8H10                        { A = 2.00E+13 n = .00 E = .00 }
+
+
+# From A1CH3
+
+E04f: A1C2H5-C8H10 + H -> A1-C6H6 + C2H5                  { A = 2.31E+06 n = 2.17 E = 17.42 }
+E05f: A1C2H5-C8H10 + OH -> A1OH-C6H6O + C2H5              { A = 7.83E+02 n = 2.88 E = 13.48 }
+
+
+# From C3H8 (x5/6)
+# Lump both N- and I- isomers
+
+E06f: A1C2H5-C8H10 + H -> A1C2H4-C8H9 + H2                { A = 4.83E-02 n = 4.71 E = 25.99 }
+E07f: A1C2H5-C8H10 + O -> A1C2H4-C8H9 + OH                { A = 1.96E+00 n = 4.09 E = 10.65 }
+E08f: A1C2H5-C8H10 + OH -> A1C2H4-C8H9 + H2O               { A = 4.47E+06 n = 2.01 E = 1.53 }
+E09f: A1C2H5-C8H10 + HO2 -> A1C2H4-C8H9 + H2O2            { A = 8.03E+03 n = 2.60 E = 58.20 }
+E10f: A1C2H5-C8H10 + CH3 -> A1C2H4-C8H9 + CH4             { A = 7.53E-01 n = 3.65 E = 29.93 }
+
+
+# Ethylbenzene radicals
+# ---------------------
+# Tokmakov & Lin 2004
+# HPL for both decompositions
+
+E11f: A1C2H4-C8H9 -> A1--C6H5 + C2H4                     { A = 1.72E+11 n = 0.78 E = 161.94 }
+E12f: A1C2H4-C8H9 -> A1C2H3-C8H8 + H                     { A = 3.79E+06 n = 2.08 E = 134.33 }
+
+
+# From N-C3H7 (x1.0) & C2H5 (x2/3)
+
+E13f: A1C2H4-C8H9 + H -> A1C2H3-C8H8 + H2                    { A = 1.67E+12 n = .00 E = .00 }
+E14f: A1C2H4-C8H9 + OH -> A1C2H3-C8H8 + H2O                  { A = 2.41E+13 n = .00 E = .00 }
+E15f: A1C2H4-C8H9 + CH3 -> A1C2H3-C8H8 + CH4               { A = 3.31E+12 n = .00 E = -3.22 }
+E16f: A1C2H4-C8H9 + O2 -> A1C2H3-C8H8 + HO2              { A = 3.70E+16 n = -1.63 E = 14.30 }
+
+
+# From C2H5+O
+
+E17f: A1C2H4-C8H9 + O -> A1CH2-C7H7 + CH2O                { A = 3.17E+13 n = 0.03 E = -1.65 }
+E18f: A1C2H4-C8H9 + O -> A1CHO-C7H6O + CH3                { A = 3.17E+13 n = 0.03 E = -1.65 }
+
+
+# From N-C3H7+HO2
+
+E19: A1C2H4-C8H9 + HO2 -> A1CH2-C7H7 + CH2O + OH           { A = 7.00E+12 n = .00 E = -4.18 }
+
+
+# Low Temperature Chemistry
+# -------------------------
+# From N-C3H7+O2
+# DeSain, Klippenstein, Miller, Taatjes 2003
+# All aldehydes lumped into A1CH2+HCO
+
+E30: A1C2H4-C8H9 + O2 -> C8H9O2                          { A = 4.82E+36 n = -8.23 E = 21.62 }
+E31: A1C2H4-C8H9 + O2 -> A1CH2-C7H7 + HCO + OH            { A = 3.88E+04 n = 1.84 E = -2.42 }
+E32: C8H9O2 -> A1C2H4-C8H9 + O2                        { A = 1.21E+45 n = -10.15 E = 170.77 }
+E33: C8H9O2 -> A1C2H3-C8H8 + HO2                        { A = 2.45E+25 n = -4.48 E = 136.43 }
+E34: C8H9O2 -> A1CH2-C7H7 + HCO + OH                    { A = 1.23E+13 n = -1.12 E = 113.03 }
+E35: C8H9O2 -> C8H8OOH                                    { A = 5.45E-02 n = 3.57 E = 67.35 }
+
+
+# Estimated
+
+E36: C8H8OOH + O2 -> OC8H7OOH + OH                           { A = 1.00E+11 n = .00 E = .00 }
+E37: OC8H7OOH -> A1--C6H5 + CH2O + CO + OH                { A = 6.30E+14 n = .00 E = 180.10 }
+
+
+#===============================================================================#
+#										#
+#				 Styrene Chemistry				#
+#                           Adapted from C2H4 chemistry                         #
+#										#
+#===============================================================================#
+# Styrene
+# -------
+# Greda et al. 1992
+
+ST01: A1C2H3-C8H8 -> A1-C6H6 + H2C2                       { A = 2.40E+14 n = .00 E = 326.90 }
+
+
+# From C2H4 (x0.5)
+# Full rate for O-addition
+
+ST02f: A1C2H3-C8H8 + O -> A1CH2-C7H7 + HCO                 { A = 5.10E+07 n = 1.66 E = 2.75 }
+ST03f: A1C2H3-C8H8 + CH3 -> A1C2H2-C8H7 + CH4             { A = 1.14E+05 n = 2.00 E = 38.49 }
+
+
+# From C2H4
+# Half for each carbon atoms
+
+ST04f: A1C2H3-C8H8 + OH -> A1CHO-C7H6O + CH3             { A = 1.88E+36 n = -7.80 E = 29.54 }
+ST05f: A1C2H3-C8H8 + OH -> A1CH2-C7H7 + CH2O             { A = 1.88E+36 n = -7.80 E = 29.54 }
+
+
+# From A1CH3
+
+ST06f: A1C2H3-C8H8 + OH -> C2H3 + A1OH-C6H6O              { A = 7.83E+02 n = 2.88 E = 13.48 }
+
+
+# From A1 (x1/3)
+
+ST10f: A1C2H3-C8H8 + O -> A1C2H3*-C8H7 + OH                { A = 1.33E+13 n = .00 E = 61.50 }
+
+
+# Styrene radical
+# ---------------
+# From C2H3 + O
+
+ST11f: A1C2H2-C8H7 + O -> A1CH2-C7H7 + CO                 { A = 1.03E+13 n = 0.21 E = -1.79 }
+
+
+# From C2H3 + O2
+
+ST12f: A1C2H2-C8H7 + O2 -> A1C2H-C8H6 + HO2               { A = 0.67E+06 n = 1.61 E = -1.61 }
+ST13: A1C2H2-C8H7 + O2 -> A1CH2-C7H7 + CO + O              { A = 3.03E+11 n = 0.29 E = 0.05 }
+ST14f: A1C2H2-C8H7 + O2 -> A1CHO-C7H6O + HCO              { A = 4.58E+16 n = -1.39 E = 4.25 }
+
+
+#***#***
+
+ST00f: A1C2H-C8H6 + OH -> A1-C6H6 + HCCO                      { A = 1.0E+13 n = .00 E = .00 }
+
+
+#=========================================================================#
+#                                                                         #
+#                       Xylene Oxidation Chemistry                        #    
+#                     Adapted from Toluene Chemistry                      #
+#                                                                         #
+#=========================================================================#
+# Xylene
+# ------
+# From A1CH3 (x2)
+
+XY00f: A1CH3CH3-C8H10 -> A1CH3CH2-C8H9 + H              { A = 2.50E+18 n = -0.60 E = 396.59 }
+XY01f: A1CH3CH3-C8H10 -> A1CH3*-C7H7 + CH3              { A = 4.32E+29 n = -3.58 E = 460.93 }
+
+
+# From A1CH3+R (x2) 
+
+XY02f: A1CH3CH3-C8H10 + H -> A1CH3CH2-C8H9 + H2           { A = 1.29E+01 n = 3.98 E = 14.16 }
+XY03f: A1CH3CH3-C8H10 + O -> A1CH3CH2-C8H9 + OH           { A = 2.36E+00 n = 4.09 E = 10.65 }
+XY04f: A1CH3CH3-C8H10 + OH -> A1CH3CH2-C8H9 + H2O         { A = 3.54E+05 n = 2.39 E = -2.52 }
+XY05f: A1CH3CH3-C8H10 + O2 -> A1CH3CH2-C8H9 + HO2        { A = 4.36E+07 n = 2.50 E = 192.65 }
+XY06f: A1CH3CH3-C8H10 + HO2 -> A1CH3CH2-C8H9 + H2O2       { A = 1.87E+05 n = 2.50 E = 61.44 }
+XY07f: A1CH3CH3-C8H10 + CH3 -> A1CH3CH2-C8H9 + CH4         { A = 8.44E+14 n = .00 E = 93.12 }
+
+
+# From A1CH3+X (x2)
+
+XY09f: A1CH3CH3-C8H10 + H -> A1CH3-C7H8 + CH3             { A = 4.62E+06 n = 2.17 E = 17.42 }
+XY10f: A1CH3CH3-C8H10 + OH -> HOA1CH3-C7H8O + CH3         { A = 1.57E+03 n = 2.88 E = 13.48 }
+
+
+# !!!! CAREFUL !!!!
+# Path from Bounaceur et al. 2005
+# Rate from A1+O (x2/3)
+
+XY11: A1CH3CH3-C8H10 + O -> A1CH3-C7H8 + CO + 2 H         { A = 1.82E+08 n = 1.55 E = 12.93 }
+
+
+# Xylyl radical
+# -------------
+# Path from Bournaceur et al. 2005
+# Rate from A1CH2
+
+XY12: A1CH3CH2-C8H9 -> A1-C6H6 + H + C2H2                 { A = 8.20E+14 n = .00 E = 337.55 }
+XY13f: A1CH3CH2-C8H9 + H -> A1CH3*-C7H7 + CH3          { A = 5.83E+67 n = -14.15 E = 285.89 }
+
+
+# Total rate from A1CH2+O
+# Branching ratio from A1CH2O decomposition
+
+XY14f: A1CH3CH2-C8H9 + O -> A1CH3CHO-C8H8O + H            { A = 4.37e+18 n = -1.34 E = 6.66 }
+XY15f: A1CH3CH2-C8H9 + O -> A1CH3*-C7H7 + CH2O           { A = 5.99E+23 n = -2.47 E = 67.75 }
+XY16f: A1CH3CH2-C8H9 + O -> A1CH3-C7H8 + HCO             { A = 1.97E+22 n = -2.36 E = 34.11 }
+XY17: A1CH3CH2-C8H9 + OH -> A1CH3CHO-C8H8O + H2              { A = 2.00E+13 n = .00 E = .00 }
+
+
+# From A1CH2+O2
+# Addition from Murakami et al. 2009
+# Peroxy isomerization from Canneaux et al. 2008
+
+XY18f: A1CH3CH2-C8H9 + O2 -> A1CH3CHO-C8H8O + OH          { A = 1.38E+02 n = 2.42 E = 31.13 }
+XY19f: A1CH3CH2-C8H9 + O2 -> OA1CH3-C7H7O + CH2O          { A = 6.57E+03 n = 1.87 E = 20.93 }
+
+
+# Total rate from A1CH2+O
+# Branching ratio from A1CH2O decomposition
+
+XY201: A1CH3CH2-C8H9 + HO2 -> A1CH3CHO-C8H8O + H + OH    { A = 2.28E+13 n = -0.31 E = -2.75 }
+XY202: A1CH3CH2-C8H9 + HO2 -> A1CH3*-C7H7 + CH2O + OH    { A = 3.13E+18 n = -1.44 E = 58.34 }
+XY203: A1CH3CH2-C8H9 + HO2 -> A1CH3-C7H8 + HCO + OH      { A = 1.03E+17 n = -1.33 E = 24.70 }
+
+
+# From A-C3H5 + C3H3 (x2.0)
+
+XY22: A1CH3CH2-C8H9 + C3H3 -> A2CH3-C11H10 + 2 H         { A = 4.32E+39 n = -7.74 E = 99.80 }
+
+
+# Tolualdehyde
+# ------------
+# From A1CH3 & A1CHO decomposition
+
+XY23f: A1CH3CHO-C8H8O -> A1CHOCH2-C8H7O + H             { A = 1.25E+18 n = -0.60 E = 396.59 }
+XY24: A1CH3CHO-C8H8O -> A1--C6H5 + CO + CH3             { A = 2.16E+29 n = -3.58 E = 460.93 }
+XY25: A1CH3CHO-C8H8O -> A1CH3*-C7H7 + CO + H              { A = 2.10E+16 n = .00 E = 342.00 }
+
+
+# From A1CH3+R
+
+XY26f: A1CH3CHO-C8H8O + H -> A1CHOCH2-C8H7O + H2          { A = 6.47E+00 n = 3.98 E = 14.16 }
+XY27f: A1CH3CHO-C8H8O + O -> A1CHOCH2-C8H7O + OH          { A = 1.18E+00 n = 4.09 E = 10.65 }
+XY28f: A1CH3CHO-C8H8O + OH -> A1CHOCH2-C8H7O + H2O        { A = 1.77E+05 n = 2.39 E = -2.52 }
+XY29f: A1CH3CHO-C8H8O + O2 -> A1CHOCH2-C8H7O + HO2       { A = 2.18E+07 n = 2.50 E = 192.65 }
+XY30f: A1CH3CHO-C8H8O + HO2 -> A1CHOCH2-C8H7O + H2O2      { A = 9.33E+04 n = 2.50 E = 61.44 }
+XY31f: A1CH3CHO-C8H8O + CH3 -> A1CHOCH2-C8H7O + CH4        { A = 4.22E+14 n = .00 E = 93.12 }
+
+
+# From A1CHO+R
+
+XY33: A1CH3CHO-C8H8O + H -> A1CH3*-C7H7 + CO + H2         { A = 4.09E+09 n = 1.16 E = 10.06 }
+XY34: A1CH3CHO-C8H8O + O -> A1CH3*-C7H7 + CO + OH           { A = 5.84E+12 n = .00 E = 7.57 }
+XY35: A1CH3CHO-C8H8O + OH -> A1CH3*-C7H7 + CO + H2O       { A = 2.89E+08 n = 1.35 E = -6.58 }
+XY36: A1CH3CHO-C8H8O + O2 -> A1CH3*-C7H7 + CO + HO2      { A = 1.20E+05 n = 2.50 E = 157.13 }
+XY37: A1CH3CHO-C8H8O + HO2 -> A1CH3*-C7H7 + CO + H2O2     { A = 4.09E+04 n = 2.50 E = 42.69 }
+XY38: A1CH3CHO-C8H8O + CH3 -> A1CH3*-C7H7 + CO + CH4       { A = 3.49E-08 n = 6.21 E = 6.82 }
+
+
+# From A1CH3+H - substitution
+
+XY39f: A1CH3CHO-C8H8O + H -> A1CH3-C7H8 + HCO             { A = 2.31E+06 n = 2.17 E = 17.42 }
+XY40f: A1CH3CHO-C8H8O + H -> A1CHO-C7H6O + CH3            { A = 2.31E+06 n = 2.17 E = 17.42 }
+
+
+# From A1CH3+OH - substitution
+
+XY41f: A1CH3CHO-C8H8O + OH -> HOA1CH3-C7H8O + HCO         { A = 7.83E+02 n = 2.88 E = 13.48 }
+XY42: A1CH3CHO-C8H8O + OH -> A1O-C6H5O + H + CO + CH3     { A = 7.83E+02 n = 2.88 E = 13.48 }
+
+
+# Tolualdehyde radical
+# --------------------
+# Total rate from A1CH2+O
+# Branching ratio from A1CH2O decomposition
+
+XY43f: A1CHOCH2-C8H7O + O -> A1CHOCHO-C8H6O2 + H          { A = 4.37e+18 n = -1.34 E = 6.66 }
+XY44: A1CHOCH2-C8H7O + O -> A1--C6H5 + CO + CH2O         { A = 5.99E+23 n = -2.47 E = 67.75 }
+XY45f: A1CHOCH2-C8H7O + O -> A1CHO-C7H6O + HCO           { A = 1.97E+22 n = -2.36 E = 34.11 }
+XY46: A1CHOCH2-C8H7O + OH -> A1CHOCHO-C8H6O2 + H2            { A = 2.00E+13 n = .00 E = .00 }
+XY47f: A1CHOCH2-C8H7O + O2 -> A1CHOCHO-C8H6O2 + OH        { A = 1.38E+02 n = 2.42 E = 31.98 }
+XY48: A1CHOCH2-C8H7O + HO2 -> A1CHOCHO-C8H6O2 + OH + H    { A = 1.19E+09 n = 1.03 E = -9.41 }
+
+
+# Phthalaldehyde
+# --------------
+# From A1CHO decomposition (x2)
+
+XY50: A1CHOCHO-C8H6O2 -> A1--C6H5 + 2 CO + H              { A = 4.20E+16 n = .00 E = 342.00 }
+
+
+# From A1CHO+R (x2)
+
+XY51: A1CHOCHO-C8H6O2 + H -> A1CHO-C7H6O + CO + H         { A = 8.18E+09 n = 1.16 E = 10.06 }
+XY52: A1CHOCHO-C8H6O2 + O -> A1CHO-C7H6O + CO + O           { A = 1.17E+13 n = .00 E = 7.57 }
+XY53: A1CHOCHO-C8H6O2 + OH -> A1CHO-C7H6O + CO + OH       { A = 5.78E+08 n = 1.35 E = -6.58 }
+XY54: A1CHOCHO-C8H6O2 + O2 -> A1CHO-C7H6O + CO + O2      { A = 2.40E+05 n = 2.50 E = 157.13 }
+XY55: A1CHOCHO-C8H6O2 + HO2 -> A1CHO-C7H6O + CO + HO2     { A = 8.18E+04 n = 2.50 E = 42.69 }
+XY56: A1CHOCHO-C8H6O2 + CH3 -> A1CHO-C7H6O + CO + CH3      { A = 6.98E-08 n = 6.21 E = 6.82 }
+
+
+# From A1CH3+X (x2) - substitution
+
+XY57f: A1CHOCHO-C8H6O2 + H -> A1CHO-C7H6O + HCO           { A = 4.62E+06 n = 2.17 E = 17.42 }
+XY58: A1CHOCHO-C8H6O2 + OH -> A1O-C6H5O + H + CO + HCO    { A = 1.57E+03 n = 2.88 E = 13.48 }
+
+
+#=========================================================================#
+#                                                                         #
+#                  alpha-MethylNaphthalene chemistry                      #
+#                   Adapted from Toluene chemistry                        #
+#                                                                         #
+#=========================================================================#
+# MethylNaphthalene
+# -----------------
+
+N01f: A2CH3-C11H10 + H -> A2-C10H8 + CH3                  { A = 2.31E+06 n = 2.17 E = 17.42 }
+N02f: A2CH3-C11H10 + OH -> A2OH-C10H8O + CH3              { A = 7.83E+02 n = 2.88 E = 13.48 }
+
+
+# Collision Limit at 298K
+
+N04f: A2CH3-C11H10 -> A2CH2-C11H9 + H                   { A = 1.25E+18 n = -0.60 E = 396.59 }
+N05f: A2CH3-C11H10 -> A2--C10H7 + CH3                   { A = 3.20E+34 n = -5.02 E = 478.03 }
+N06f: A2CH2-C11H9 + H -> A2--C10H7 + CH3               { A = 5.83E+67 n = -14.15 E = 285.89 }
+N07f: A2CH2-C11H9 -> C9H7 + C2H2                          { A = 8.20E+14 n = .00 E = 337.55 }
+N08f: A2CH3-C11H10 + H -> A2CH2-C11H9 + H2                { A = 6.47E+00 n = 3.98 E = 14.16 }
+N09f: A2CH3-C11H10 + O -> A2CH2-C11H9 + OH                { A = 1.18E+00 n = 4.09 E = 10.65 }
+N10f: A2CH3-C11H10 + OH -> A2CH2-C11H9 + H2O              { A = 1.77E+05 n = 2.39 E = -2.52 }
+N11f: A2CH3-C11H10 + O2 -> A2CH2-C11H9 + HO2             { A = 2.18E+07 n = 2.50 E = 192.65 }
+N12f: A2CH3-C11H10 + CH3 -> A2CH2-C11H9 + CH4              { A = 4.22E+14 n = .00 E = 93.12 }
+N13f: A2CH3-C11H10 + HO2 -> A2CH2-C11H9 + H2O2            { A = 9.33E+04 n = 2.50 E = 61.44 }
+N14: A2CH3-C11H10 + O -> A2-C10H8 + CO + 2 H               { A = 1.10E+13 n = .00 E = 18.96 }
+N15: A2CH3-C11H10 + O -> C9H7 + CH3 + CO                   { A = 1.47E+13 n = .00 E = 18.96 }
+
+
+# Methylene-Naphthyl
+# ------------------
+
+N16f: A2CH2-C11H9 + O -> A2CH2O-C11H9O                       { A = 2.28E+14 n = .00 E = .00 }
+N17: A2CH2-C11H9 + OH -> A2CH2O-C11H9O + H                   { A = 2.00E+13 n = .00 E = .00 }
+N18f: A2CH2-C11H9 + HO2 -> A2CH2O-C11H9O + OH             { A = 1.19E+09 n = 1.03 E = -9.41 }
+
+
+# From A-C3H5 + C3H3 (x2.0)
+
+N18: A2CH2-C11H9 + C3H3 -> A3-C14H10 + 2 H               { A = 4.32E+39 n = -7.74 E = 99.80 }
+N20f: A2CH2-C11H9 + O2 -> A2CHO-C11H8O + OH              { A = 3.76E+15 n = -1.55 E = 47.37 }
+N21f: A2CH2-C11H9 + O2 -> A2O-C10H7O + CH2O               { A = 3.08E+09 n = 0.37 E = 70.75 }
+
+
+# Methoxy-Naphthyl
+# ----------------
+
+N22f: A2CH2O-C11H9O -> A2CHO-C11H8O + H                  { A = 5.26E+28 n = -5.08 E = 93.09 }
+N23f: A2CH2O-C11H9O -> A2--C10H7 + CH2O                 { A = 7.21E+33 n = -6.21 E = 154.18 }
+N24f: A2CH2O-C11H9O + H -> A2CHO-C11H8O + H2                 { A = 1.33E+13 n = .00 E = .00 }
+N25f: A2CH2O-C11H9O + O -> A2CHO-C11H8O + OH                 { A = 6.67E+12 n = .00 E = .00 }
+N26f: A2CH2O-C11H9O + OH -> A2CHO-C11H8O + H2O               { A = 3.33E+12 n = .00 E = .00 }
+N27f: A2CH2O-C11H9O + O2 -> A2CHO-C11H8O + HO2           { A = 2.85E-13 n = 7.60 E = -14.77 }
+
+
+# Naphthaldehyde
+# --------------
+
+N28: A2CHO-C11H8O -> A2--C10H7 + CO + H                   { A = 2.10E+16 n = .00 E = 342.00 }
+N29: A2CHO-C11H8O + H -> A2--C10H7 + CO + H2              { A = 4.09E+09 n = 1.16 E = 10.06 }
+N30: A2CHO-C11H8O + O -> A2--C10H7 + CO + OH                { A = 5.84E+12 n = .00 E = 7.57 }
+N31: A2CHO-C11H8O + OH -> A2--C10H7 + CO + H2O            { A = 2.89E+08 n = 1.35 E = -6.58 }
+N32: A2CHO-C11H8O + O2 -> A2--C10H7 + CO + HO2           { A = 1.20E+05 n = 2.50 E = 157.13 }
+N33: A2CHO-C11H8O + HO2 -> A2--C10H7 + CO + H2O2          { A = 4.09E+04 n = 2.50 E = 42.69 }
+N34: A2CHO-C11H8O + CH3 -> A2--C10H7 + CO + CH4            { A = 3.49E-08 n = 6.21 E = 6.82 }

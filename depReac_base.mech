@@ -1,0 +1,703 @@
+#==========================================================================#
+#                                                                          #
+#                         Cyclopentadiene chemistry                        #
+#                                                                          #
+#        Zhong & Bozzelli, Int. J. Chem. Kinet., 1997, 29, 893-913         #
+#        Zhong & Bozzelli, J. Phys. Chem. A, 1998, 102, 3537-3555          #
+#                                                                          #
+#==========================================================================#
+
+
+# Cyclopentadiene
+# ---------------
+
+# Tokmakov, Moskaleva & Lin 2003
+# Rate at 2bar
+CP01f: C5H6 -> C5H5 + H				{ A = 1.73E+68 n =-15.16 E = 486.90 }
+
+# *** NEW ***
+# Roy's Thesis 1999
+# 1/2 of each C3H5
+CP02f: C5H6 + H -> C5H5 + H2			{ A = 2.80E+13 n =   .00 E =   9.45 }
+CP03f: C5H6 + H -> A-C3H5 + C2H2		{ A = 3.30E+14 n =   .00 E =  51.65 }
+CP04 : C5H6 + H -> S-C3H5 + C2H2		{ A = 3.30E+14 n =   .00 E =  51.65 }
+
+CP05f: C5H6 + O   -> C5H5 + OH			{ A = 4.77E+04 n =  2.71 E =   4.63 }
+CP06f: C5H6 + OH  -> C5H5 + H2O			{ A = 3.08E+06 n =  2.00 E =    .00 }
+CP07f: C5H6 + O2  -> C5H5 + HO2			{ A = 1.00E+14 n =   .00 E = 155.44 }
+CP08f: C5H6 + HO2 -> C5H5 + H2O2		{ A = 1.10E+04 n =  2.60 E =  53.97 }
+CP09f: C5H6 + CH3 -> C5H5 + CH4			{ A = 1.80E-01 n =  4.00 E =    .00 }
+
+# *** NEW ***
+# Burcat, Dvianyaninov, & Olchanski 2001
+CP10f: C5H6 + C2H3   -> C5H5 + C2H4		{ A = 6.00E+12 n =   .00 E =    .00 }
+CP11f: C5H6 + N-C4H5 -> C5H5 + C4H6		{ A = 6.00E+12 n =   .00 E =    .00 }
+
+# *** NEW ***
+# From C2H4 + O
+CP12f: C5H6 + O  -> T-C5H5O + H			{ A = 7.66E+09 n =  0.88 E =   4.77 }
+CP13 : C5H6 + O  -> C2H4 + C2H2 + CO		{ A = 3.89E+08 n =  1.36 E =   3.71 }
+
+# *** NEW ***
+# From C2H4 + OH
+CP14 : C5H6 + OH -> C4H6 + HCO			{ A = 3.75E+36 n = -7.80 E =  29.54 }
+CP15 : C5H6 + OH -> C2H4 + C2H2 + HCO		{ A = 3.75E+36 n = -7.80 E =  29.54 }
+
+# Cyclopentadienyl radical
+# ------------------------
+
+# *** UPDATED ***
+# Moskaleva & Lin 2000
+# Knyazev & Slagle 2002
+CP16f: C3H3 + C2H2 -> C5H5			{ A = 6.87E+55 n =-12.50 E = 176.00 }
+
+# Murakami et al. 2003 - Total rate
+# Kislov & Mebel - Branching ratio
+CP17 : C5H5 + C5H5 -> A2-C10H8 + 2 H		{ A = 6.39E+29 n = -4.03 E = 147.30 }
+
+# *** NEW ***
+# Melius, Colvin, Marinov, Pitz, & Senkan 1996
+# Sharma & Green 2009 - Rate fillted at P=1bar
+CP18 : C5H5 + CH3 -> C5H4CH2 + 2 H		{ A = 4.91E+31 n = -4.85 E = 103.65 }
+
+# Frank, Herzler, Just & Wahl 1994
+CP19f: C5H5 + O   -> C5H4O + H			{ A = 7.00E+13 n =   .00 E =    .00 }
+
+# *** NEW ***
+# From A-C3H5 + O2
+# Lee & Bozzelli 2005 - Total rate
+CP20f: C5H5 + O2  -> C5H4O + OH 		{ A = 4.34E+07 n =  1.30 E =  73.92 }
+
+# *** NEW ***
+# From C2H5+HO2
+CP21f: C5H5 + HO2 -> S-C5H5O + OH		{ A = 3.10E+13 n =   .00 E =    .00 }
+
+# Zhong & Bozzelli 1998
+# Entrance rate x2.0
+CP22 : C5H5 + OH  -> S-C5H5O + H		{ A = 1.02E+13 n =   .00 E =    .00 }
+
+# Cyclopentadienoxy radical
+# -------------------------
+
+CP23f: S-C5H5O -> C5H4O + H			{ A = 2.00E+13 n =   .00 E = 125.52 }
+CP24 : T-C5H5O -> N-C4H5 + CO			{ A = 1.00E+12 n =   .00 E = 150.62 }
+
+# 1/3 rate from CH3O
+CP25 : S-C5H5O + H  -> C5H4O + H2 		{ A = 6.67E+12 n =   .00 E =    .00 }
+CP26 : S-C5H5O + O  -> C5H4O + OH 		{ A = 3.33E+12 n =   .00 E =    .00 }
+CP27 : S-C5H5O + OH -> C5H4O + H2O 		{ A = 1.67E+12 n =   .00 E =    .00 }
+CP28 : S-C5H5O + O2 -> C5H4O + HO2 		{ A = 1.43E-13 n =  7.60 E = -14.77 }
+
+# 2/3 rate from C2H5
+CP29 : T-C5H5O + H  -> C5H4O + H2 		{ A = 1.33E+12 n =   .00 E =    .00 }
+CP30 : T-C5H5O + O2 -> C5H4O + HO2 		{ A = 1.28E+07 n =  1.02 E =  -8.51 }
+
+# Cyclopentadienone
+# -----------------
+
+# Wang & Brezinsky 1998
+# Fitted
+CP31 : C5H4O -> 2 C2H2 + CO			{ A = 3.37E+44 n = -8.00 E = 454.70 }
+
+# *** NEW ***
+# HPL From C2H4+H
+CP32f: C5H4O + H -> T-C5H5O			{ A = 2.74E+09 n =  1.46 E =   5.67 }
+
+CP33f: C5H4O + O -> C4H4 + CO2 			{ A = 1.00E+13 n =   .00 E =   8.37 }
+
+# *** NEW ***
+# Kislov & Mebel 2008 - Full entrance rate
+CP34 : C5H5 + C5H6 -> C9H8 + CH3 		{ A = 7.86E-01 n =  3.07 E =  23.97 }
+
+#==========================================================================#
+#                                                                          #
+#                             PAH chemistry                                #
+#                          HACA Based Mechanism                            #
+#                                                                          #
+#==========================================================================#
+
+# ----------------- #
+# Fulvene - C5H4CH2 #
+# ----------------- #
+
+# Marinov 1998 (x0.5)
+P000f: C5H4CH2 + H -> A1-C6H6 + H			{ A = 1.50E+12 n =  0.50 E =   8.37 }
+
+# Senosiain & Miller 2007 (JPCA) 
+# P=1bar
+P001f: N-C4H5 + C2H2 -> C5H4CH2 + H			{ A = 4.62E+15 n = -0.89 E =  38.25 }
+P002f: I-C4H5 + C2H2 -> C5H4CH2 + H			{ A = 6.80E+24 n = -3.45 E =  85.09 }
+# P=10bar
+#001f: N-C4H5 + C2H2 -> C5H4CH2 + H			{ A = 1.74E+19 n = -1.86 E =  51.81 }
+#002f: I-C4H5 + C2H2 -> C5H4CH2 + H			{ A = 9.69E+25 n = -3.76 E =  89.23 }
+
+# Miller & Klippenstein 2003
+# P=1bar
+P003f: C5H4CH2 -> A1-C6H6				{ A = 1.45E+45 n = -8.90 E = 405.86 }
+P004f: C5H4CH2 -> A1--C6H5 + H				{ A = 2.24E+68 n =-14.65 E = 596.54 }
+# P=10bar
+#003f: C5H4CH2 -> A1-C6H6				{ A = 2.95E+31 n = -4.97 E = 370.14 }
+#004f: C5H4CH2 -> A1--C6H5 + H				{ A = 8.51E+24 n = -2.51 E = 474.17 }
+
+
+# ------------ #
+# Benzene - A1 #
+# ------------ #
+
+# Wang & Frenklach 1997
+P005f: N-C4H3 + C2H2 -> A1--C6H5			{ A = 9.60E+70 n =-17.77 E = 130.96 }
+
+# Senosiain & Miller 2007 (JPCA) 
+# P=1bar
+P006f: N-C4H5 + C2H2 -> A1-C6H6 + H			{ A = 1.38E+16 n = -1.00 E =  37.24 }
+P007f: I-C4H5 + C2H2 -> A1-C6H6 + H			{ A = 1.67E+23 n = -3.30 E = 104.43 }
+# P=10bar
+#006f: N-C4H5 + C2H2 -> A1-C6H6 + H			{ A = 1.69E+16 n = -1.03 E =  37.52 }
+#007f: I-C4H5 + C2H2 -> A1-C6H6 + H			{ A = 8.25E+24 n = -3.76 E = 111.14 }
+
+# Miller, Georgievskii, Klippenstein, Allen, Simmonett 2009
+# P=1bar - Fitted rate valid for 600K-2500K
+P008 : A-C3H5 + C3H3 -> C5H4CH2 + 2H			{ A = 2.16E+39 n = -7.74 E =  99.80 }
+
+# Georgievskii, Miller, & Klippenstein 2007 
+# -> Total rate at 1bar
+# Miller & Klippenstein 2003
+# -> Branching ratios
+# -> 2-ethynyl-1,3-butadiene lumped into Fulvene
+# Fitted rates valid for 800K-2000K
+# P=1bar
+P009f: C3H3 + C3H3 -> C5H4CH2				{ A = 8.25E+46 n =-10.10 E =  70.96 }
+P010f: C3H3 + C3H3 -> A1-C6H6				{ A = 1.07E+45 n = -9.57 E =  71.19 }
+P011f: C3H3 + C3H3 -> A1--C6H5 + H			{ A = 5.77E+37 n = -7.00 E = 131.82 }
+# P=10bar
+#009f: C3H3 + C3H3 -> C5H4CH2				{ A = 5.53E+42 n = -8.77 E =  66.38 }
+#010f: C3H3 + C3H3 -> A1-C6H6				{ A = 7.17E+40 n = -8.24 E =  66.61 }
+#011f: C3H3 + C3H3 -> A1--C6H5 + H			{ A = 3.87E+33 n = -5.67 E = 127.24 }
+
+# Kislov and Mebel 2005
+K012f: A1--C6H5 + C2H2 -> A1C2H2-C8H7			{ A = 3.29E+06 n =  2.05 E =  13.23 }
+
+# Wang & Frenklach 1997 - estimated HPL
+P013f: A1--C6H5 + C2H3 -> A1C2H3-C8H8			{ A = 6.00E+12 n =   .00 E =    .00 }
+
+# Tokmakov & Lin 2004
+P014f: A1-C6H6  + C2H3 -> A1C2H3-C8H8 + H		{ A = 1.87E+07 n =  1.47 E =  23.15 }
+P015f: A1--C6H5 + C2H4 -> A1-C6H6 + C2H3		{ A = 9.45E-03 n =  4.47 E =  18.71 }
+
+# From A1 (x1/3)
+P016f: A1C2H-C8H6      -> A1C2H*-C8H5 + H		{ A = 4.30E+60 n =-12.48 E = 619.59 }
+K017f: A1C2H-C8H6 + H  -> A1C2H*-C8H5 + H2		{ A = 1.29E+08 n =  1.89 E =  73.55 }
+P018f: A1C2H-C8H6 + OH -> A1C2H*-C8H5 + H2O		{ A = 7.80E+03 n =  2.68 E =   3.07 }
+
+# From C2H3 (x1/2)
+K019f: A1C2H2-C8H7      -> A1C2H3*-C8H7			{ A = 5.90E+10 n =  0.54 E = 115.34 }
+K020f: A1C2H2-C8H7      -> A1C2H-C8H6 + H		{ A = 7.18E+10 n =  1.02 E = 161.81 }
+K021f: A1C2H2-C8H7 + H  -> A1C2H-C8H6 + H2		{ A = 1.65E+11 n =  0.49 E =  44.48 }
+P022f: A1C2H2-C8H7 + OH -> A1C2H-C8H6 + H2O		{ A = 2.50E+12 n =   .00 E =    .00 }
+
+# From A1 (x1/3)
+P023f: A1C2H3-C8H8      -> A1C2H3*-C8H7 + H		{ A = 4.30E+60 n =-12.48 E = 619.59 }
+K024f: A1C2H3-C8H8 + H  -> A1C2H3*-C8H7 + H2		{ A = 5.23E+06 n =  2.36 E =  70.78 }
+P025f: A1C2H3-C8H8 + OH -> A1C2H3*-C8H7 + H2O		{ A = 1.34E+02 n =  3.33 E =   6.09 }
+
+# From C2H4 (x1/2)
+P026f: A1C2H3-C8H8      -> A1C2H2-C8H7 + H		{ A = 3.01E+14 n =  0.34 E = 465.49 }
+P027f: A1C2H3-C8H8 + H  -> A1C2H2-C8H7 + H2		{ A = 6.35E+04 n =  2.75 E =  48.74 }
+P028f: A1C2H3-C8H8 + OH -> A1C2H2-C8H7 + H2O		{ A = 6.55E-02 n =  4.20 E =  -3.60 }
+
+
+# ---------------- #
+# Naphthalene - A2 #
+# ---------------- #
+
+# Kislov & Mebel 2005
+K100f: A1C2H*-C8H5  + C2H2 -> A2--C10H7			{ A = 1.34E+04 n =  2.50 E =   5.37 }
+K102f: A1C2H3*-C8H7 + C2H2 -> A2-C10H8 + H		{ A = 3.02E+03 n =  2.55 E =  13.31 }
+
+# Senosiain & Miller 2007 (JPCA)
+# From n-C4H5+C2H2 (HPL)
+# Total addition rate independent of pressure => use HPL
+P104f: A1C2H2-C8H7 + C2H2 -> A2-C10H8 + H		{ A = 3.80E+07 n =  1.62 E =  18.57 }
+
+# From A1 (x1/3)
+P105f: A1C2H-C8H6  + C2H3 -> A2-C10H8 + H		{ A = 3.60E+17 n = -1.44 E =  65.93 }
+
+# From A1-
+P106f: A1C2H*-C8H5 + C2H4 -> A2-C10H8 + H		{ A = 3.62E+28 n = -4.24 E =  99.85 }
+
+# Aguilera-Iparraguirre & Klopper 2007
+# Total entrance channel rate
+P107f: A1--C6H5 + C4H4 -> A2-C10H8 + H			{ A = 1.26E+04 n =  2.61 E =   6.00 }
+
+
+# From A1 (x2/3)
+P108f: A2-C10H8       -> A2--C10H7 + H			{ A = 8.60E+60 n =-12.48 E = 619.55 }
+K109f: A2-C10H8 + H   -> A2--C10H7 + H2			{ A = 2.65E+08 n =  1.87 E =  71.53 }
+K110f: A2-C10H8 + OH  -> A2--C10H7 + H2O		{ A = 9.63E+02 n =  3.02 E =  18.30 }
+
+# From A1 (x2/3)
+P111f: A2-C10H8       -> A2*-C10H7 + H			{ A = 8.60E+60 n =-12.48 E = 619.55 }
+K112f: A2-C10H8 + H   -> A2*-C10H7 + H2			{ A = 2.65E+08 n =  1.87 E =  71.53 }
+K113f: A2-C10H8 + OH  -> A2*-C10H7 + H2O		{ A = 9.63E+02 n =  3.02 E =  18.30 }
+
+# Kislov & Mebel 2005
+K114f: A2--C10H7 + C2H2 -> A2C2H2A-C12H9		{ A = 1.28E+06 n =  2.05 E =   8.08 }
+K115f: A2*-C10H7 + C2H2 -> A2C2H2B-C12H9		{ A = 3.29E+06 n =  2.05 E =  13.23 }
+
+# From A1-
+P116f: A2--C10H7 + C2H3 -> A2C2H2A-C12H9 + H		{ A = 6.00E+12 n =   .00 E =    .00 }
+P117f: A2*-C10H7 + C2H3 -> A2C2H2B-C12H9 + H		{ A = 6.00E+12 n =   .00 E =    .00 }
+
+# From A1 (x2/3)
+P118f: A2-C10H8  + C2H3 -> A2C2H2A-C12H9 + H2		{ A = 7.20E+17 n = -1.44 E =  65.93 }
+P119f: A2-C10H8  + C2H3 -> A2C2H2B-C12H9 + H2		{ A = 7.20E+17 n = -1.44 E =  65.93 }
+
+# From A1-
+P120f: A2--C10H7 + C2H4 -> A2C2H2A-C12H9 + H2		{ A = 3.62E+28 n = -4.24 E =  99.85 }
+P121f: A2*-C10H7 + C2H4 -> A2C2H2B-C12H9 + H2		{ A = 3.62E+28 n = -4.24 E =  99.85 }
+
+
+# From A1C2H2
+K122f: A2C2H2A-C12H9      -> A2C2HA-C12H8 + H		{ A = 7.18E+10 n =  1.02 E = 161.81 }
+K123f: A2C2H2A-C12H9 + H  -> A2C2HA-C12H8 + H2		{ A = 1.65E+11 n =  0.49 E =  44.48 }
+P124f: A2C2H2A-C12H9 + OH -> A2C2HA-C12H8 + H2O		{ A = 2.50E+12 n =   .00 E =    .00 }
+
+K125f: A2C2H2B-C12H9      -> A2C2HB-C12H8 + H		{ A = 7.18E+10 n =  1.02 E = 161.81 }
+K126f: A2C2H2B-C12H9 + H  -> A2C2HB-C12H8 + H2		{ A = 1.65E+11 n =  0.49 E =  44.48 }
+P127f: A2C2H2B-C12H9 + OH -> A2C2HB-C12H8 + H2O		{ A = 2.50E+12 n =   .00 E =    .00 }
+
+# From A1 (x1/6)
+P128f: A2C2HA-C12H8      -> A2C2HA*-C12H7 + H		{ A = 2.15E+60 n =-12.48 E = 619.55 }
+K129f: A2C2HA-C12H8 + H  -> A2C2HA*-C12H7 + H2		{ A = 1.32E+08 n =  1.88 E =  70.38 }
+P130f: A2C2HA-C12H8 + OH -> A2C2HA*-C12H7 + H2O		{ A = 6.72E+01 n =  3.33 E =   6.09 }
+
+P131f: A2C2HB-C12H8      -> A2C2HB*-C12H7 + H		{ A = 2.15E+60 n =-12.48 E = 619.55 }
+K132f: A2C2HB-C12H8 + H  -> A2C2HB*-C12H7 + H2		{ A = 1.32E+08 n =  1.88 E =  70.38 }
+P133f: A2C2HB-C12H8 + OH -> A2C2HB*-C12H7 + H2O		{ A = 6.72E+01 n =  3.33 E =   6.09 }
+
+
+# --------------------- #
+# Acenaphthalene - A2R5 #
+# --------------------- #
+
+# Kislov & Mebel 2005
+K200f: A2C2H2A-C12H9 -> A2R5-C12H8 + H			{ A = 2.88E+11 n =  0.23 E =  71.24 }
+
+# Lifshitz, Tambura & Dubnikova 2007
+P201f: A2C2HA-C12H8 + H -> A2R5-C12H8 + H		{ A = 3.52E+12 n =   .00 E =  55.90 }
+
+
+# From A1 (x2/3)
+P202f: A2R5-C12H8      -> A2R5--C12H7 + H		{ A = 8.60E+60 n =-12.48 E = 619.55 }
+K203f: A2R5-C12H8 + H  -> A2R5--C12H7 + H2		{ A = 2.65E+08 n =  1.87 E =  71.53 }
+K204f: A2R5-C12H8 + OH -> A2R5--C12H7 + H2O		{ A = 9.63E+02 n =  3.02 E =  18.30 }
+
+# From A1-
+K205f: A2R5--C12H7 + C2H2 -> A2R5C2H2-C14H9		{ A = 3.29E+06 n =  2.05 E =  13.23 }
+
+# From A1-
+P206f: A2R5--C12H7 + C2H3 -> A2R5C2H2-C14H9 + H		{ A = 6.00E+12 n =   .00 E =    .00 }
+
+# From A1 (x2/3)
+P207f: A2R5-C12H8  + C2H3 -> A2R5C2H2-C14H9 + H2	{ A = 3.60E+17 n = -1.44 E =  65.93 }
+
+# From A1-
+P208f: A2R5--C12H7 + C2H4 -> A2R5C2H2-C14H9 + H2	{ A = 3.62E+28 n = -4.24 E =  99.85 }
+
+# From A1 (x1/6)
+P209f: A2R5C2H-C14H8      -> A2R5C2H*-C14H7 + H		{ A = 2.15E+60 n =-12.48 E = 619.55 }
+K210f: A2R5C2H-C14H8 + H  -> A2R5C2H*-C14H7 + H2	{ A = 1.32E+08 n =  1.88 E =  70.38 }
+P211f: A2R5C2H-C14H8 + OH -> A2R5C2H*-C14H7 + H2O	{ A = 6.72E+01 n =  3.33 E =   6.09 }
+
+# From A1C2H2
+K212f: A2R5C2H2-C14H9      -> A2R5C2H-C14H8 + H		{ A = 7.18E+10 n =  1.02 E = 161.81 }
+K213f: A2R5C2H2-C14H9 + H  -> A2R5C2H-C14H8 + H2 	{ A = 1.65E+11 n =  0.49 E =  44.48 }
+P214f: A2R5C2H2-C14H9 + OH -> A2R5C2H-C14H8 + H2O 	{ A = 2.50E+12 n =   .00 E =    .00 }
+
+
+# ------------- #
+# Biphenyl - P2 #
+# ------------- #
+
+
+# Park, Burova,, Rodgers & Lin 1999
+# Fitted exp rate
+P301f: A1-C6H6  + A1--C6H5 -> P2-C12H10 + H		{ A = 9.55E+11 n =   .00 E =   9.07 }
+
+# Park & lin 1997
+P302f: A1--C6H5 + A1--C6H5 -> P2-C12H10			{ A = 1.39E+13 n =   .00 E =   0.47 }
+
+# From A1 (x2/3)
+P304f: P2-C12H10        -> P2--C12H9 + H		{ A = 8.60E+60 n =-12.48 E = 619.55 }
+P305f: P2-C12H10 + H    -> P2--C12H9 + H2		{ A = 4.01E+08 n =  1.80 E =  68.42 }
+P306f: P2-C12H10 + OH   -> P2--C12H9 + H2O		{ A = 2.69E+02 n =  3.33 E =   6.09 }
+
+
+# ----------------- #
+# Phenanthrene - A3 #
+# ----------------- #
+
+
+# Kislov & Mebel 2005
+# Same as for A1C2H*
+K401f: A2C2HA*-C12H7 + C2H2 -> A3--C14H9		{ A = 1.34E+04 n =  2.50 E =   5.37 }
+K403f: A2C2HB*-C12H7 + C2H2 -> A3--C14H9		{ A = 1.34E+04 n =  2.50 E =   5.37 }
+
+# Senosiain & Miller 2007 (JPCA)
+# From n-C4H5+C2H2 (HPL)
+P405f: A2C2H2A-C12H9 + C2H2 -> A3-C14H10 + H		{ A = 3.80E+07 n =  1.62 E =  18.57 }
+P406f: A2C2H2B-C12H9 + C2H2 -> A3-C14H10 + H		{ A = 3.80E+07 n =  1.62 E =  18.57 }
+
+# From A1-
+P407f: P2--C12H9 + C2H2 -> A3-C14H10 + H		{ A = 3.29E+06 n =  2.05 E =  13.23 }
+
+# From A1-
+P408f: A2C2HA*-C12H7 + C2H3 -> A3-C14H10		{ A = 6.00E+12 n =   .00 E =    .00 }
+P409f: A2C2HB*-C12H7 + C2H3 -> A3-C14H10		{ A = 6.00E+12 n =   .00 E =    .00 }
+
+# From A1 (x1/6)
+P410f: A2C2HA-C12H8  + C2H3 -> A3-C14H10 + H		{ A = 1.80E+17 n = -1.44 E =  65.93 }
+P411f: A2C2HB-C12H8  + C2H3 -> A3-C14H10 + H		{ A = 1.80E+17 n = -1.44 E =  65.93 }
+
+# From A1-
+P412f: A2C2HA*-C12H7 + C2H4 -> A3-C14H10 + H		{ A = 3.62E+28 n = -4.24 E =  99.85 }
+P413f: A2C2HB*-C12H7 + C2H4 -> A3-C14H10 + H		{ A = 3.62E+28 n = -4.24 E =  99.85 }
+
+# From A1-
+P414f: A2--C10H7 + C4H4 -> A3-C14H10 + H		{ A = 1.26E+04 n =  2.61 E =   6.00 }
+P415f: A2*-C10H7 + C4H4 -> A3-C14H10 + H		{ A = 1.26E+04 n =  2.61 E =   6.00 }
+
+# From P2 (x1/3)
+P416f: A1C2H-C8H6  + A1--C6H5 -> A3-C14H10 + H		{ A = 3.18E+11 n =   .00 E =   9.07 }
+# From P2 & P2-
+# Reduced (x1/4) because of C2H group
+P417f: A1C2H*-C8H5 + A1-C6H6  -> A3-C14H10 + H		{ A = 2.39E+11 n =   .00 E =   9.07 }
+# From P2 & P2-
+P418f: A1C2H*-C8H5 + A1--C6H5 -> A3-C14H10		{ A = 1.39E+13 n =   .00 E =   0.47 }
+
+
+# From A1 (x1/3)
+P419f: A3-C14H10      -> A3--C14H9 + H			{ A = 4.30E+60 n =-12.48 E = 619.55 }
+K420f: A3-C14H10 + H  -> A3--C14H9 + H2			{ A = 2.00E+08 n =  1.80 E =  68.42 }
+K421f: A3-C14H10 + OH -> A3--C14H9 + H2O		{ A = 1.34E+02 n =  3.33 E =   6.09 }
+
+# From A1 (x2/3) & A2
+P422f: A3-C14H10      -> A3*-C14H9 + H			{ A = 4.30E+60 n =-12.48 E = 619.55 }
+K423f: A3-C14H10 + H  -> A3*-C14H9 + H2			{ A = 2.65E+08 n =  1.87 E =  71.53 }
+K424f: A3-C14H10 + OH -> A3*-C14H9 + H2O		{ A = 9.63E+02 n =  3.02 E =  18.30 }
+
+# Frenklach 2005
+P425f: A3--C14H9 -> A2R5--C12H7 + C2H2			{ A = 1.30E+11 n =  1.08 E = 294.55 }
+
+
+# ------------------------ #
+# Acephenanthrylene - A3R5 #
+# ------------------------ #
+
+# Kislov & Mebel 2005
+# Same as for A1C2H*
+P501f: A2R5C2H*-C14H7 + C2H2 -> A3R5--C16H9		{ A = 1.34E+04 n =  2.50 E =   5.37 }
+
+# Senosiain & Miller 2007 (JPCA)
+# From n-C4H5+C2H2 (HPL)
+P502f: A2R5C2H2-C14H9 + C2H2 -> A3R5-C16H10 + H		{ A = 3.80E+07 n =  1.62 E =  18.57 }
+
+# From A2-
+P503f: A3*-C14H9 + C2H2 -> A3R5-C16H10 + H		{ A = 1.28E+06 n =  2.05 E =   8.08 }
+
+# From A1-
+P504f: A3*-C14H9 + C2H3 -> A3R5-C16H10 + H2		{ A = 6.00E+12 n =   .00 E =    .00 }
+
+# From A1-
+P505f: A2R5--C12H7 + C4H4 -> A3R5-C16H10 + H		{ A = 1.26E+04 n =  2.61 E =   6.00 }
+
+
+# From A1 (x1/6)
+P506f: A3R5-C16H10      -> A3R5--C16H9 + H		{ A = 2.15E+60 n =-12.48 E = 619.55 }
+K507f: A3R5-C16H10 + H  -> A3R5--C16H9 + H2		{ A = 2.65E+08 n =  1.87 E =  71.53 }
+K508f: A3R5-C16H10 + OH -> A3R5--C16H9 + H2O		{ A = 9.63E+02 n =  3.02 E =  18.30 }
+
+
+# ----------- #
+# Pyrene - A4 #
+# ----------- #
+
+
+# From A2-
+K600f: A3--C14H9 + C2H2 -> A4-C16H10 + H		{ A = 1.28E+06 n =  2.05 E =   8.08 }
+
+# From A2 (x2)
+P601f: A4-C16H10      -> A4--C16H9 + H			{ A = 1.72E+60 n =-12.48 E = 619.55 }
+K602f: A4-C16H10 + H  -> A4--C16H9 + H2			{ A = 5.30E+08 n =  1.87 E =  71.53 }
+K603f: A4-C16H10 + OH -> A4--C16H9 + H2O		{ A = 1.93E+03 n =  3.02 E =  18.30 }
+
+
+# --------------------------- #
+# Cyclopenta[cd]pyrene - A4R5 #
+# --------------------------- #
+
+
+# From A2-
+K700f: A4--C16H9   + C2H2 -> A4R5-C18H10 + H		{ A = 1.28E+06 n =  2.05 E =   8.08 }
+K701f: A3R5--C16H9 + C2H2 -> A4R5-C18H10 + H		{ A = 1.28E+06 n =  2.05 E =   8.08 }
+
+
+# ------------------- #
+# Fluoranthene - FLTN #
+# ------------------- #
+
+
+# From A1+A1- (x2/3 and x1)
+P800 : A2-C10H8  + A1--C6H5 -> FLTN-C16H10 + H + H2	{ A = 6.37E+11 n =   .00 E =   9.07 }
+P801 : A2--C10H7 + A1-C6H6  -> FLTN-C16H10 + H + H2	{ A = 9.55E+11 n =   .00 E =   9.07 }
+
+# From A1-+A1-
+P802 : A2--C10H7 + A1--C6H5 -> FLTN-C16H10 + H2		{ A = 1.39E+13 n =   .00 E =   0.47 }
+
+
+#==========================================================================#
+#                                                                          #
+#                             Indene chemistry                             #
+#                        Adapted from Cyclopentadiene                      #
+#                                                                          #
+#==========================================================================#
+
+# Indene
+# ------
+
+# Kislov & Mebel 2007
+# Rate estimated
+I00f: A1--C6H5 + C3H3 -> C9H8			{ A = 1.00E+13 n =   .00 E =    .00 }
+
+# Same rate as for C5H6
+I01f: C9H8 -> C9H7 + H				{ A = 1.73E+68 n =-15.16 E = 486.90 }
+
+# Same rate as for C5H6
+I02f: C9H8 + H -> C9H7 + H2			{ A = 2.80E+13 n =   .00 E =   9.45 }
+
+# Kislov & Mebel 2007
+I03f: A1CH2-C7H7 + C2H2 -> C9H8 + H 		{ A = 3.16E+04 n =  2.48 E =  46.28 }
+
+# Same rate as for C5H6
+I05f: C9H8 + O   -> C9H7 + OH			{ A = 4.77E+04 n =  2.71 E =   4.63 }
+I06f: C9H8 + OH  -> C9H7 + H2O			{ A = 3.08E+06 n =  2.00 E =    .00 }
+I07f: C9H8 + O2  -> C9H7 + HO2			{ A = 1.00E+14 n =   .00 E = 155.44 }
+I08f: C9H8 + HO2 -> C9H7 + H2O2			{ A = 1.10E+04 n =  2.60 E =  53.97 }
+I09f: C9H8 + CH3 -> C9H7 + CH4			{ A = 1.80E-01 n =  4.00 E =    .00 }
+
+# 1/2 of the rate for C5H6
+I12 : C9H8 + O  -> C9H6O + 2 H			{ A = 3.83E+09 n =  0.88 E =   4.77 }
+I15 : C9H8 + OH -> O-C6H4 + C2H4 + HCO		{ A = 1.88E+36 n = -7.80 E =  29.54 }
+
+
+# Indenyl radical
+# 2/5 of the rate for C5H5
+# ------------------------
+
+I17 : C9H7 + C5H5 -> A3-C14H10 + 2 H		{ A = 2.56E+29 n = -4.03 E = 147.30 }
+
+# From C5H5 + CH3 (x2/5)
+I18 : C9H7 + CH3 -> A2-C10H8 + 2H		{ A = 1.96E+31 n = -4.85 E = 103.65 }
+
+I19f: C9H7 + O   -> C9H6O + H			{ A = 2.80E+13 n =   .00 E =    .00 }
+I20f: C9H7 + O2  -> C9H6O + OH			{ A = 1.74E+07 n =  1.30 E =  73.92 }
+I21 : C9H7 + HO2 -> C9H6O + H2O			{ A = 1.24E+13 n =   .00 E =    .00 }
+I22 : C9H7 + OH  -> C9H6O + 2H			{ A = 4.08E+12 n =   .00 E =    .00 }
+
+# From A-C3H5 + C3H3 (x2.0)
+I23 : C9H7 + C3H3 -> A2R5-C12H8 + 2H		{ A = 4.32E+39 n = -7.74 E =  99.80 }
+
+
+
+# Indenone
+# --------
+
+# Wang & Brezinsky 1998
+I31 : C9H6O -> O-C6H4 + C2H2 + CO		{ A = 3.37E+44 n = -8.00 E = 454.70 }
+
+# From C5H4O+H
+I32 : C9H6O + H -> A1C2H3*-C8H7 + CO		{ A = 1.37E+09 n =  1.46 E =   5.67 }
+
+
+#==========================================================================#
+#                                                                          #
+#                      Benzene Oxidation Chemistry                         #
+#                                                                          #
+#      "Detailed kinetic modeling of benzene and toluene oxidation         #
+#                            at high temperatures"                         #
+#                    Zoran M. Djurisic - Master's Thesis                   #
+#    http://diesel.me.berkeley.edu/~zoran/publications/2000_MS_Thesis/     #
+#                                                                          #
+#==========================================================================#
+
+
+########## Benzene oxidation ##########
+
+# Benzene
+# -------
+
+# Miller & Klippenstein 2003 (1bar)
+# Updated to include HPL from Harding et al. 2005
+OX00f: A1-C6H6 -> A1--C6H5 + H				{ A = 1.29E+61 n =-12.48 E = 619.59 }
+
+# Wang et al. 2000
+OX01f: A1--C6H5 + M3 -> O-C6H4 + H + M3			{ A = 1.00E+84 n =-18.87 E = 376.98 
+						  	  Ai= 4.30E+12 ni=  0.62 Ei= 323.43
+						  	  fcA = 0.098  fctA = 696 
+						  	  fcb = 0.902  fctb = 358  
+						  	  fcc = 1.0    fctc = 3856 }
+OX02f: C4H2 + C2H2 -> O-C6H4				{ A = 5.00E+78 n =-19.31 E = 284.18 }
+
+
+# Mebel & Lin 1997
+OX03f: A1-C6H6 + H -> A1--C6H5 + H2			{ A = 6.02E+08 n =  1.80 E =  68.42 }
+
+# *** NEW ***
+# Seta, Nakajima & Miyoshi 2006
+OX04f: A1-C6H6 + OH -> A1--C6H5 + H2O			{ A = 2.34E+04 n =  2.68 E =   3.07 }
+OX05f: A1-C6H6 + OH -> A1OH-C6H6O + H			{ A = 1.32E+02 n =  3.25 E =  23.39 }
+
+# *** NEW ***
+# From C2H4 + O2 (x1.5)
+# Hua, Ruscic, Wang 2005
+# Backward ~ 2e12
+OX06f: A1-C6H6 + O2 -> A1--C6H5 + HO2			{ A = 4.34E+14 n =   .00 E = 269.00 }
+
+# *** NEW ***
+# Taatjes, Wang, et al. 2010
+OX99f: A1-C6H6 + O -> A1O-C6H5O + H			{ A = 2.74E+08 n =  1.55 E =  12.93 }
+OX07f: A1-C6H6 + O -> A1O-C6H5O + H			{ A = 1.99E+07 n =  1.80 E =  16.63 }
+OX08f: A1-C6H6 + O -> A1OH-C6H6O 			{ A = 2.03E+12 n =  0.30 E =  18.42 }
+OX09f: A1-C6H6 + O -> C5H6 + CO				{ A = 5.80E+16 n = -0.77 E =  63.98 }
+
+# Lindsted & Skevis 1994 (x2.0)
+OX10f: A1-C6H6 + O -> A1--C6H5 + OH			{ A = 4.00E+13 n =   .00 E =  61.50 }
+
+
+# Phenyl radical
+# --------------
+
+# *** NEW ***
+# da Silva, Chen & Bozzelli 2007
+# From 3/4-methylphenyl + O2
+OX11f: A1--C6H5 + O2  -> A1O-C6H5O + O			{ A = 8.57E+20 n = -2.27 E =  30.08 }
+
+# Frank, Herzler, Just & Wahl 1994
+OX12f: A1--C6H5 + O2  -> OC6H4O  + H			{ A = 3.00E+13 n =   .00 E =  37.58 }
+OX13f: A1--C6H5 + O   -> A1O-C6H5O			{ A = 1.00E+14 n =   .00 E =    .00 }
+
+OX14f: A1--C6H5 + OH  -> A1O-C6H5O + H			{ A = 3.00E+13 n =   .00 E =    .00 }
+OX15f: A1--C6H5 + HO2 -> A1O-C6H5O + OH			{ A = 3.00E+13 n =   .00 E =    .00 }
+
+# Tokmakov & Lin 1999/2002
+OX16f: A1--C6H5 + CH4 -> A1-C6H6 + CH3			{ A = 3.89E-03 n =  4.57 E =  22.00 }
+
+
+# Phenol
+# ------
+
+# Xu & Lin 2006
+# Rates for 1 atm
+# Formation of CO x0.765 to better match Horn & Roy 1989
+OX17f: A1OH-C6H6O -> C5H6 + CO				{ A = 6.59E+15 n = -0.61 E = 310.11 }
+OX18f: A1OH-C6H6O -> A1O-C6H5O + H			{ A = 1.01E+71 n =-15.92 E = 522.12 }
+
+# *** NEW ***
+# From CH3OH+R
+# Jodkowski, Rayez, & Rayez 1999
+OX19f: A1OH-C6H6O + H   -> A1O-C6H5O + H2		{ A = 6.83E+01 n =  3.40 E =  30.26 }
+OX20f: A1OH-C6H6O + OH  -> A1O-C6H5O + H2O		{ A = 1.73E+01 n =  3.40 E =  -4.78 }
+OX21f: A1OH-C6H6O + CH3 -> A1O-C6H5O + CH4		{ A = 3.70E-04 n =  4.70 E =  20.20 }
+
+# Brezinsky et al. 1998
+OX22f: A1OH-C6H6O + O2 -> A1O-C6H5O + HO2		{ A = 7.32E+13 n =   .00 E = 173.22 }
+
+
+# Phenoxy radical
+# 2-B1 state for O=C6H5
+# ---------------------
+
+# Murakami et al. 2003
+OX23f: A1O-C6H5O -> CO + C5H5				{ A = 2.90E+10 n =   .00 E = 152.40 }
+
+# From C2H5 + O (x2)
+OX24f: A1O-C6H5O + O -> OC6H4O + H			{ A = 6.34E+13 n =  0.03 E =  -1.65 }
+
+# *** NEW ***
+# From A-C3H5 + O2 - Total rate (x3/2)
+OX25f: A1O-C6H5O + O2  -> OC6H4O + OH			{ A = 6.51E+07 n =  1.30 E =  73.92 }
+
+
+# p-Benzoquinone
+# Thermoprop & Reactions for para
+# -------------------------------
+
+OX26f: OC6H4O -> C5H4O + CO				{ A = 7.40E+11 n =   .00 E = 246.86 }
+
+OX27f: OC6H4O + H -> T-C5H5O + CO			{ A = 4.30E+09 n =  1.45 E =  16.18 }
+OX28 : OC6H4O + O -> CH2CO + C2H2 + 2 CO		{ A = 3.00E+13 n =   .00 E =  20.92 }
+
+
+########## Naphthalene oxidation ##########
+
+# Naphthalene
+# 5/3 of the rate for A1
+# ----------------------
+
+OX30f: A2-C10H8  + O  -> A2O-C10H7O  + H		{ A = 1.83E+13 n =   .00 E =  18.95 }
+OX31f: A2-C10H8  + O  -> A2OH-C10H8O			{ A = 1.83E+13 n =   .00 E =  18.95 }
+OX32f: A2-C10H8  + OH -> A2OH-C10H8O + H		{ A = 2.20E+02 n =  3.25 E =  23.39 }
+
+# Naphthyl radical
+# Full rate for A1-
+# -----------------
+
+OX33f: A2--C10H7 + O2 -> A2O-C10H7O  + O		{ A = 8.57E+20 n = -2.27 E =  30.08 }
+OX34f: A2*-C10H7 + O2 -> A2O-C10H7O  + O		{ A = 8.57E+20 n = -2.27 E =  30.08 }
+OX35 : A2--C10H7 + O2 -> C9H6O + CO + H		  	{ A = 3.00E+13 n =   .00 E =  37.58 }
+OX36 : A2*-C10H7 + O2 -> C9H6O + CO + H			{ A = 3.00E+13 n =   .00 E =  37.58 }
+
+OX37f: A2--C10H7 + O  -> A2O-C10H7O			{ A = 1.00E+14 n =   .00 E =    .00 }
+OX38f: A2*-C10H7 + O  -> A2O-C10H7O			{ A = 1.00E+14 n =   .00 E =    .00 }
+
+OX39f: A2--C10H7 + OH -> A2O-C10H7O + H			{ A = 3.00E+13 n =   .00 E =    .00 }
+OX40f: A2*-C10H7 + OH -> A2O-C10H7O + H			{ A = 3.00E+13 n =   .00 E =    .00 }
+
+# Naphthol
+# Full rate for A1OH
+# ------------------
+
+OX41f: A2OH-C10H8O -> C9H8 + CO				{ A = 8.62E+15 n = -0.61 E = 310.11 }
+OX42f: A2OH-C10H8O -> A2O-C10H7O + H			{ A = 1.01E+71 n =-15.92 E = 522.12 }
+
+OX43f: A2OH-C10H8O + H   -> A2O-C10H7O + H2		{ A = 6.83E+01 n =  3.40 E =  30.26 }
+OX44f: A2OH-C10H8O + OH  -> A2O-C10H7O + H2O		{ A = 1.73E+01 n =  3.40 E =  -4.78 }
+OX45f: A2OH-C10H8O + CH3 -> A2O-C10H7O + CH4		{ A = 3.70E-04 n =  4.70 E =  20.20 }
+
+# Naphthoxy radical
+# Full rate for A1O
+# -----------------
+
+OX46f: A2O-C10H7O      -> C9H7 + CO			{ A = 2.90E+10 n =   .00 E = 152.40 }
+OX47 : A2O-C10H7O + O  -> C9H6O + CO + H		{ A = 1.68E+14 n =   .00 E =    .00 }
+OX48 : A2O-C10H7O + O2 -> C9H6O + CO + OH		{ A = 6.51E+07 n =  1.30 E =  73.92 }
+
+
+########## Higher PAH oxidation ##########
+
+# From A1-+O2
+OX50 : A3--C14H9   + O2 -> A2C2H2B-C12H9 + 2CO		{ A = 8.57E+20 n = -2.27 E =  30.08 }
+OX51 : A3*-C14H9   + O2 -> A2C2H2A-C12H9 + 2CO		{ A = 8.57E+20 n = -2.27 E =  30.08 }
+OX52 : A4--C16H9   + O2 -> A3--C14H9 + 2CO		{ A = 8.57E+20 n = -2.27 E =  30.08 }
+OX53 : A2R5--C12H7 + O2 -> A2--C10H7 + 2CO		{ A = 8.57E+20 n = -2.27 E =  30.08 }
+OX54 : A3R5--C16H9 + O2 -> A3--C14H9 + 2CO		{ A = 8.57E+20 n = -2.27 E =  30.08 }
+
+# From A1+OH
+# Rescaled by number of active sites
+OX60 : A3-C14H10   + OH -> A2C2HA-C12H8 + CH3 + CO	{ A = 1.10E+02 n =  3.25 E =  23.39 }
+OX61 : A3-C14H10   + OH -> A2C2HB-C12H8 + CH3 + CO	{ A = 1.10E+02 n =  3.25 E =  23.39 }
+OX62 : A4-C16H10   + OH -> A3-C14H10 + HCCO		{ A = 2.20E+02 n =  3.25 E =  23.39 }
+OX63 : A2R5-C12H8  + OH -> A2-C10H8  + HCCO		{ A = 1.76E+02 n =  3.25 E =  23.39 }
+OX64 : A3R5-C16H10 + OH -> A3-C14H10 + HCCO		{ A = 2.20E+02 n =  3.25 E =  23.39 }
+OX65 : A4R5-C18H10 + OH -> A4-C16H10 + HCCO		{ A = 2.20E+02 n =  3.25 E =  23.39 }
+OX66 : FLTN-C16H10 + OH -> A3-C14H10 + HCCO		{ A = 2.20E+02 n =  3.25 E =  23.39 }
